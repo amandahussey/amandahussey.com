@@ -1,5 +1,35 @@
-.App {
+.App--dark {
   text-align: center;
+  background-color: #282c34;
+  color: lightgoldenrodyellow;
+}
+
+.App--light {
+  text-align: center;
+  background-color: lightgoldenrodyellow;
+  color: #2c3858;
+}
+
+.color-toggle--light {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: lightgoldenrodyellow;
+  position: absolute;
+  right: 36px;
+  top: 36px;
+  border: 2px solid #caca7e;
+}
+
+.color-toggle--dark {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: #495b8e;
+  position: absolute;
+  right: 36px;
+  top: 36px;
+  border: 2px solid #2c3858;
 }
 
 .App-logo {
@@ -14,14 +44,12 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
