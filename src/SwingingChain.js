@@ -1,53 +1,45 @@
 import React, { Component } from 'react';
 import './SwingingChain.css';
 
-class SwingingChain extends Component {
-  constructor(){
-    super()
-    this.state = {
-      
-    }
-  }
-
-
-  render (){
+const SwingingChain = (props) => {
+  
     return (
-        <div class="chain-container">
+        <div className={`chain-container ${ props.isPullingChain ? 'animate-pull-chain' : '' }`} onClick={props.handlePullChain}>
 
-        <div class="chandelier-holder">
+        <div className="chandelier-holder">
       
-          <div class="chain first-chains very-first-chain">
-            <div class="chain first-chains">
-              <div class="chain first-chains">
-                <div class="chain first-chains">
-                  <div class="chain first-chains">
-                    <div class="chain first-chains">
-                      <div class="chain first-chains">
-                        <div class="chain first-chains">
-                          <div class="chain first-chains">
-                            <div class="chain first-chains">
-                              <div class="chain first-chains">
-                                <div class="chain first-chains">
-                                  <div class="chain first-chains">
-                                    <div class="chain first-chains">
-                                      <div class="chain">
-                                        <div class="chain">
-                                          <div class="chain">
-                                            <div class="chain">
-                                              <div class="chain">
-                                                <div class="chain">
-                                                  <div class="chain">
-                                                    <div class="chain">
-                                                      <div class="chain">
-                                                        <div class="chain">
-                                                          <div class="chain">
-                                                            <div class="chain">
-                                                              <div class="chain">
-                                                                <div class="chain">
-                                                                  <div class="chain">
-                                                                    <div class="chain">
-                                                                      <div class="chain">
-                                                                        <div class="chain chandelier"></div>
+          <div className="chain first-chains very-first-chain">
+            <div className="chain first-chains">
+              <div className="chain first-chains">
+                <div className="chain first-chains">
+                  <div className="chain first-chains">
+                    <div className="chain first-chains">
+                      <div className="chain first-chains">
+                        <div className="chain first-chains">
+                          <div className="chain first-chains">
+                            <div className="chain first-chains">
+                              <div className="chain first-chains">
+                                <div className="chain first-chains">
+                                  <div className="chain first-chains">
+                                    <div className="chain first-chains">
+                                      <div className="chain">
+                                        <div className="chain">
+                                          <div className="chain">
+                                            <div className="chain">
+                                              <div className="chain">
+                                                <div className="chain">
+                                                  <div className="chain">
+                                                    <div className="chain">
+                                                      <div className="chain">
+                                                        <div className="chain">
+                                                          <div className="chain">
+                                                            <div className="chain">
+                                                              <div className="chain">
+                                                                <div className="chain">
+                                                                  <div className="chain">
+                                                                    <div className="chain">
+                                                                      <div className="chain">
+                                                                        <div className="chain chandelier"></div>
                                                                       </div>
                                                                     </div>
                                                                   </div>
@@ -84,7 +76,6 @@ class SwingingChain extends Component {
         
       </div>
     );
-  }
 }
 
 export default SwingingChain;

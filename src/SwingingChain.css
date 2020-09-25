@@ -15,7 +15,7 @@ html {
 
 .chain-container {
     position: absolute;
-    top: 0;
+    top: -20px;
     right: 20%;
 }
 
@@ -35,7 +35,7 @@ html {
   width: 6px;
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/7599/HiddenDinner-Logo-SVGForWeb_Chain.svg);
   transform-origin: top center;
-  animation: fall-n-swing 7s 1;
+  animation: fall-n-swing 2s 1;
   animation-timing-function: ease-in-out;
 }
 
@@ -49,6 +49,17 @@ html {
   width: 135px;
   height: 95px;
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/7599/HiddenDinner-Logo-SVGForWeb_Chandelier.svg) center no-repeat;
+}
+
+.animate-pull-chain {
+    animation: pull-chain 1s 1 ease-in;
+}
+
+@keyframes pull-chain {
+    0% { top: -20px; }
+    35% { top: 0px; }
+    72% { top: -25px; }
+    85% { top: -20px; }
 }
 
 /* ANIMATIONS ----------------------------------------- */
