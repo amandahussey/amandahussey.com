@@ -9,12 +9,31 @@ class App extends Component {
     this.state = {
       lightIsOn: false,
       isPullingChain: false,
-      timeOut: null
+      triggerChainWiggle: false,
+      timeout: null,
+      isInactive: false
     }
   }
 
   componentDidMount(){
     this.timeout = null
+    const timeout = setTimeout(() => {
+      this.handleChainWiggle()
+    }, 5000)
+  }
+
+  handleChainWiggle = () => {
+    this.setState({
+      triggerChainWiggle: true
+    }, 
+    () => {
+      setTimeout(() => {
+        this.setState({
+          triggerChainWiggle: false
+        })
+      }, 1750) // wait for wiggle animation
+    }
+    )
   }
 
   toggleColor = () => {
@@ -23,7 +42,7 @@ class App extends Component {
     })
   }
 
-  handlePullChain = () => {
+  handleChainPull = () => {
     const { isPullingChain, lightIsOn, timeout } = this.state
 
     if(isPullingChain) return // debounce
@@ -31,27 +50,26 @@ class App extends Component {
       this.setState({
         isPullingChain: true,
       }, () => {
-          const timeout = setTimeout(() => { // wait for 1s to complete animation
+          const timeout = setTimeout(() => { 
           this.setState({
             isPullingChain: false,
             lightIsOn: !lightIsOn,
             timeout: timeout
-          })
-        }, 1000)
+          }, () => console.log('timeout', timeout))
+        }, 500) // wait for chain pull animation
       })
     }
   }
 
   render (){
-    const { lightIsOn, isPullingChain } = this.state
+    const { lightIsOn, isPullingChain, triggerChainWiggle } = this.state
 
     return (
       <div className={ `App ${this.state.lightIsOn === true ? 'App--light' : 'App--dark' }` }>
-        <div className={ this.state.lightIsOn === true ? 'color-toggle dark-background' : 'color-toggle light-background' } onClick={this.toggleColor}></div>
         <header className={`App-header ${this.state.lightIsOn === false ? 'glow-in-the-dark' : ''}` }>
           Amanda Hussey
         </header>
-        <SwingingChain lightIsOn={lightIsOn} handlePullChain={this.handlePullChain} isPullingChain={isPullingChain} />
+        <SwingingChain lightIsOn={lightIsOn} handleChainPull={this.handleChainPull} isPullingChain={isPullingChain} triggerChainWiggle={triggerChainWiggle} />
       </div>
     );
   }

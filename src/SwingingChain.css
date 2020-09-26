@@ -30,13 +30,11 @@ html {
   position: absolute;
   z-index: 1;
   left: 0;
-  top: 12px;
-  height: 13px;
-  width: 6px;
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/7599/HiddenDinner-Logo-SVGForWeb_Chain.svg);
+  top: 8px;
+  height: 8px;
+  width: 8px;
   transform-origin: top center;
-  animation: fall-n-swing 2s 1;
-  animation-timing-function: ease-in-out;
+  background-repeat: no-repeat;
 }
 
 .very-first-chain {
@@ -44,84 +42,54 @@ html {
 }
 
 .chandelier {
-  top: 9px;
-  left: -65px;
-  width: 135px;
-  height: 95px;
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/7599/HiddenDinner-Logo-SVGForWeb_Chandelier.svg) center no-repeat;
+    top: 9px;
+    left: -2px;
+    width: 14px;
+    height: 20px;
 }
 
-.animate-pull-chain {
-    animation: pull-chain 1s 1 ease-in;
+.animate--chain-pull {
+    animation: pull-chain 500ms 1 ease-in;
+}
+
+.animate--chain-wiggle .chain {
+    animation: wiggle 1.75s 1;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes pull-chain {
     0% { top: -20px; }
     35% { top: 0px; }
-    72% { top: -25px; }
-    85% { top: -20px; }
+    80% { top: -30px; }
+    100% { top: -20px; }
 }
 
 /* ANIMATIONS ----------------------------------------- */
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+@keyframes wiggle {
 
-@keyframes fall-n-swing {
   0% {
-    transform: rotateZ(7deg) translate(-2px, -9px);
+    transform: rotateZ(0deg);
   }
   14% {
-    transform: rotateZ(-2.5deg);
-  }
-  28% {
-    transform: rotateZ(1.75deg);
-  }
-  42% {
-    transform: rotateZ(-1.25deg);
-  }
-  56% {
-    transform: rotateZ(.75deg);
-  }
-  70% {
     transform: rotateZ(-.25deg);
   }
+  28% {
+    transform: rotateZ(.20deg);
+  }
+  42% {
+    transform: rotateZ(-.15deg);
+  }
+  56% {
+    transform: rotateZ(.10deg);
+  }
+  70% {
+    transform: rotateZ(-.05deg);
+  }
   84% {
-    transform: rotateZ(.15deg);
+    transform: rotateZ(.01deg);
   }
   100% {
     transform: rotateZ(0deg);
   }
-}
-
-
-/* MEDIA QUERIES ----------------------------------------- */
-
-@media (max-width: 640px), (max-height: 640px) {
-  
-  html {
-    background: #2E1A03;
-  }
-  body {
-    background-image: none;
-  }
-  .wrapper {
-    margin-bottom: -200px;
-  }
-  .chandelier-holder {
-    margin-top: -185px;
-  }
-  .chandelier-new-height {
-    height: 320px;
-  }
-  .first-chains {
-    height: 0;
-  }
-  
 }

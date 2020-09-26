@@ -28,25 +28,7 @@
   position: absolute;
   top: 40%;
   left: 20%;
-}
-
-.color-toggle {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  position: absolute;
-  right: 36px;
-  top: 36px;
-}
-  
-.light-background {
-  background: var(--light-bg);
-  border: 2px solid #caca7e;
-}
-
-.dark-background {
-  background: var(--dark-bg);
-  border: 2px solid #2c3858;
+  text-transform: uppercase;
 }
 
 .glow-in-the-dark {
