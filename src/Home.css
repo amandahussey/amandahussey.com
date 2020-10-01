@@ -1,0 +1,59 @@
+:root {
+    --dark-bg: black;
+    --dark-bg-text: #FBB03B;
+    --light-bg: lightgoldenrodyellow;
+    --light-bg-text: black;
+}
+  
+.App {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.App--dark {
+    background-color: var(--dark-bg);
+    color: var(--dark-bg-text);
+}
+
+.App--light {
+    /* background-color: var(--light-bg); */
+    background-image:
+        linear-gradient(
+            #efe5c4, #2f2d27
+        );
+    color: var(--light-bg-text);
+} 
+
+.App-header {
+    font-size: calc(40px + 2vmin);
+    transform: skew(0deg, -10deg) scaleY(1.333);
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    text-transform: uppercase;
+    transition: transform 500ms;
+}
+
+.unskew {
+    transform: skew(0deg, 0deg) scaleY(1);
+    transition: transform 500ms;
+}
+
+.glow-in-the-dark {
+    color: yellow;
+    --color1: yellow;
+    --color2: lime;
+    --color3: green;
+    --color4: darkgreen;
+    --interval: 1s;
+    text-shadow: 
+        0 0 10px var(--color1),
+        0 0 20px var(--color2),
+        0 0 40px var(--color3),
+        0 0 80px var(--color4);
+    will-change: filter, color;
+    filter: saturate(60%);
+    animation: glow 2s ease-in-out both infinite;	
+}

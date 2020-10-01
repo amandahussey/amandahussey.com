@@ -1,0 +1,143 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  font-size: 10px;
+}
+
+$camera-distance: 400px;
+$wall-material: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/138980/d1e55cb1f626ee8eb9cde3762a93a0a0.jpg);
+
+.stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  perspective: $camera-distance;
+  
+  div {
+    box-sizing: border-box;
+  }
+  
+  .floor {
+    background: #ccc;
+    background-size: 99%;
+    border: 1px solid black;
+    transform: translate(-50%, 1.5em) rotateX(90deg);
+    transform-origin: center top;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(
+        to bottom,
+        rgba(21, 21, 21, 0.73) 10%,
+        rgba(10, 10, 10, 0.85) 60%,
+        #000 89%
+      );
+    }
+  }
+
+  .rightwall {
+    height: 3em !important;
+    background: #ccc;
+    background-image: $wall-material;
+    transform: translate(50%, -50%) rotateY(-90deg);
+    transform-origin: left center;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(
+        to right,
+        rgba(80, 80, 80, 0.88) -20%,
+        #000 50%
+      );
+      opacity: 0.9;
+    }
+  }
+
+  .leftwall {
+    height: 3em !important;
+    background: #ccc;
+    background-image: $wall-material;
+    transform: translate(-150%, -50%) rotateY(90deg);
+    transform-origin: right center;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(to left, #424242 -9%, #000 42%);
+      opacity: 0.9;
+    }
+  }
+
+  .center {
+    height: 3em !important;
+    transform: translate(-50%, -50%);
+    background-image: $wall-material;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.71) 10%,
+        rgba(0, 0, 0, 0.71) 50%
+      );
+      opacity: 0.9;
+    }
+  }
+
+  .ceiling {
+    transform: translate(-50%, -5.5em) rotateX(-90deg);
+    transform-origin: bottom center;
+    background-image: $wall-material;
+    background-size: 150%;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.71) -8%,
+        #000 50%
+      );
+      opacity: 0.9;
+    }
+  }
+
+  .threed {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    width: 6em;
+    height: 4em;
+    left: 50%;
+    top: 50%;
+  }
+}

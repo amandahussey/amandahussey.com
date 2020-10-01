@@ -1,18 +1,3 @@
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
-
-html {
-  overflow: hidden;
-  /* thx svgeneration.com/recipes/Blue-Jean (transp, 4, #241401, .08) */
-  background: #2E1A03;
-  background-image: 
-    url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nNDAwJyB2aWV3Qm94PScwIDAgNDAwIDQwMCc+Cgk8ZGVmcz4KCQk8cGF0dGVybiBpZD0nYmx1ZXN0cmlwZScgcGF0dGVyblVuaXRzPSd1c2VyU3BhY2VPblVzZScgeD0nMCcgeT0nMCcgd2lkdGg9JzQnIGhlaWdodD0nNCcgdmlld0JveD0nMCAwIDQgNCcgPgoJCQk8bGluZSB4MT0nLTEnIHkxPSctMScgeDI9JzQnIHkyPSc0JyBzdHJva2U9JyMyNDE0MDEnIHN0cm9rZS13aWR0aD0nMScvPgoJCQk8bGluZSB4MT0nMycgeTE9Jy0xJyB4Mj0nNScgeTI9JzEnIHN0cm9rZT0nIzI0MTQwMScgc3Ryb2tlLXdpZHRoPScxJy8+CgkJCTxsaW5lIHgxPSctMScgeTE9JzMnIHgyPScxJyB5Mj0nNScgc3Ryb2tlPScjMjQxNDAxJyBzdHJva2Utd2lkdGg9JzEnLz4KCQk8L3BhdHRlcm4+IAoJCTxmaWx0ZXIgaWQ9J2Z1enonIHg9JzAnIHk9JzAnPgoJCQk8ZmVUdXJidWxlbmNlIHR5cGU9J3R1cmJ1bGVuY2UnIGJhc2VGcmVxdWVuY3k9Jy41JyBudW1PY3RhdmVzPScyJyBzdGl0Y2hUaWxlcz0nc3RpdGNoJy8+CgkJCTxmZUNvbnZvbHZlTWF0cml4IG9yZGVyPSczLDMnIGtlcm5lbE1hdHJpeD0nMCwtLjI1LDAsLS4yNSwyLC0uMjUsMCwtLjI1LDAnLz4KCQk8L2ZpbHRlcj4KCTwvZGVmcz4KCTxyZWN0IHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnIGZpbGw9J3VybCgjYmx1ZXN0cmlwZSknLz4KCTxyZWN0IHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnIGZpbHRlcj0ndXJsKCNmdXp6KScgb3BhY2l0eT0nMC4wOCcvPgo8L3N2Zz4=),
-    radial-gradient(ellipse at center, hsl(33, 86%, 12%) 0%, hsl(32, 99%, 7%) 100%);
-}
-
 .chain-container {
     position: absolute;
     top: -20px;
@@ -20,25 +5,25 @@ html {
 }
 
 .chandelier-holder {
-  position: relative;
-  height: 500px;
-  padding: 0 .5em;
-  margin-top: -20px;
+    position: relative;
+    height: 500px;
+    padding: 0 .5em;
+    margin-top: -20px;
 }
 
 .chain {
-  position: absolute;
-  z-index: 1;
-  left: 0;
-  top: 8px;
-  height: 8px;
-  width: 8px;
-  transform-origin: top center;
-  background-repeat: no-repeat;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 8px;
+    height: 8px;
+    width: 8px;
+    transform-origin: top center;
+    background-repeat: no-repeat;
 }
 
 .very-first-chain {
-  left: 50%;
+    left: 50%;
 }
 
 .chandelier {
