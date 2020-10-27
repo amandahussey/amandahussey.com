@@ -10,12 +10,15 @@ class Landing extends Component {
     }
 
     render (){
-   
+        const { navIsFixed } = this.props 
+
+        console.log('navIsFixed', navIsFixed)
+
         return (
             <div id='landing__container'>
                 <div id='landing__text-container'>
-                    <h1>Amanda Hussey</h1>
-                    <h2>Software Developer</h2>
+                    <h1 id='landing__text-container__name' className={ navIsFixed ? 'fixed-name' : ''}>Amanda Hussey</h1>
+                    <h2 id='landing__text-container__software-dev'>Software Developer</h2>
                 </div>
             </div>
             

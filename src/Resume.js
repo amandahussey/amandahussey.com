@@ -26,11 +26,18 @@ class Resume extends Component {
                         </div>
 
                         <h3>Application Developer</h3>
-                        <p>[ React + Redux ] [ AngularJS ] [ NodeJS ]</p>
-
+                        <p className='resume-section__technologies-used'>
+                            <span>[ React + Redux ] </span>
+                            <span>[ AngularJS ] </span>
+                            <span>[ NodeJS ]</span>
+                        </p>
                         <div className='resume-section__description'> 
-                            <p><span>Greatest Contribution:</span> Worked closely with designer to develop strategies to deliver best practices for UI/UX.</p>
-                            <p className='resume-section__description__takeaway'>I emphasize UI/UX.</p>
+                            <div className='resume-section__description__greatest-moment'>Greatest Contribution:</div>
+                            <div className='resume-section__description__paragraph'>   
+                                <p>Worked closely with designer to develop strategies to deliver best practices for UI/UX.</p>
+                            </div>
+                            
+                            <p className='resume-section__description__takeaway'>I value UI/UX.</p>
                         </div>
                     </div>
 
@@ -41,12 +48,17 @@ class Resume extends Component {
                         </div>
 
                         <h3>Front End Developer</h3>
-                        <p>[ React + Redux ] [ jQuery + ES6 template literals ]</p>
+                        <p className='resume-section__technologies-used'>
+                            <span>[ React + Redux ] </span>
+                            <span>[ jQuery + ES6 template literals ]</span>
+                        </p>
 
                         <div className='resume-section__description'>
-                            <p><span>Proudest Moment:</span> Led 10+ project scoping meetings in Q4 2019, which received positive feedback through to executive level, 
-                                due to ability to communicate technical concepts to non-technical employees, 
-                                as well as ability to interpret user needs into technical requirements.</p>
+                            <div className='resume-section__description__greatest-moment'>Proudest Moment:</div>
+                            <div className='resume-section__description__paragraph'>   
+                                <p>Led 10+ project scoping meetings in Q4 2019, which received positive feedback all around!</p> 
+                                <p>I enjoy being the middle man of sorts, between tech and non-tech people.</p> 
+                            </div>
                             <p className='resume-section__description__takeaway'>I make a decent middle man.</p>
                         </div>
                     </div>
@@ -58,15 +70,21 @@ class Resume extends Component {
                         </div>
 
                         <h3>Junior Software Developer</h3>
-                        <p>[ AngularJS ] [ SQL (SSMS) ]</p>
+                        <p className='resume-section__technologies-used'>
+                            <span>[ AngularJS ] </span>
+                            <span>[ SQL (SSMS) ]</span>
+                        </p>
+                        
 
                         <div className='resume-section__description'>
-                            <p><span>Greatest Accomplishment:</span> The Pack Station!</p>
-
-                            <p>A key feature of the web application developed using AngularJS, original CSS, and existing business logic.
-                            Final UI designed by me, as an alternative to the mockup provided. 
-                            Feature used heavily in sales demos and planned to be used in an advertising campaign. 
-                            I wish I had screenshots to share!</p>
+                            <div className='resume-section__description__greatest-moment'>Greatest Accomplishment:</div>
+                            <div className='resume-section__description__paragraph'>   
+                                <p>The Pack Station!</p>
+                                <p>A key feature of the web application developed using AngularJS, original CSS, and existing business logic.
+                                Final UI designed by me, as an alternative to the mockup provided. 
+                                Feature used heavily in sales demos and planned to be used in an advertising campaign. 
+                                I wish I had screenshots to share!</p>
+                            </div>
 
                             <p className='resume-section__description__takeaway'>I offer alternative solutions.</p>
 

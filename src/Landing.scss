@@ -11,7 +11,7 @@
     overflow: auto;
 }
 
-#landing__text-container h1 {
+#landing__text-container__name {
     font-family: $dramatic-font;
     text-align: center;
     font-size: 100px;
@@ -33,20 +33,7 @@
 }
 
 
-#landing__text-container h1.fixed-nav {
-    font-family: $dramatic-font;
-    text-align: center;
-    font-size: 100px;
-    // text-shadow: 0 2px 0 #E91E63;
-    width: 100vw;
-
-    position: fixed;
-    z-index: 3;
-    top: 0;
-}
-
-
-#landing__text-container h2 {
+#landing__text-container__software-dev {
     font-family: $paragraph-font;
     text-align: center;
     // text-shadow: 0 2px 0 #E91E63;
@@ -62,10 +49,9 @@
     animation-delay: calc(var(--scroll) * -1s);
 }
 
-.fixed-nav {
-    position: fixed;
-    top: 12;
-    z-index: 3;
+.fixed-name {
+    top: 4px !important;
+    font-size: 56px !important;
 }
 
 .remove-software-developer {
@@ -73,6 +59,7 @@
 }
 
 @media only screen and (min-width: 600px) {
+
     @keyframes zoom-out--h1 {
         0% {
             font-size: 28px;
@@ -82,12 +69,17 @@
         }
         100% {
             font-size: 56px;
-            top: 0;
+            top: 4px;
         }
     }
 }
 
 @media only screen and (max-width: 600px) {
+
+    .fixed-name {
+        font-size: 30px !important;
+    }
+
     @keyframes zoom-out--h1 {
         0% {
             font-size: 12px;

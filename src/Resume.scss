@@ -52,9 +52,20 @@
     margin-bottom: 70px;
     font-family: $paragraph-font;
 }
+.resume-section__technologies-used {
+    font-weight: 600;
+}
 
-.resume-section__description span {
+.resume-section__description__greatest-moment {
     font-family: $header-font;
+    margin-bottom: 0;
+}
+
+.resume-section__description__paragraph {
+    margin-left: 24px;
+}
+.resume-section__description__paragraph p {
+
 }
 
 .resume-section__description__takeaway {
@@ -101,12 +112,16 @@
     }
     .resume-section h3 {
         font-size: .9em;
+        margin-bottom: 0;
     }
     .resume-section p {
         font-size: .8em;
     }
     #uic {
         text-align: left;
+    }
+    .resume-section__description__greatest-moment {
+        font-size: .9em;
     }
 }
 
@@ -126,5 +141,12 @@
     #uic {
         text-align: left;
         margin-bottom: 40px;
+    }
+    .resume-section__technologies-used {
+        display: flex;
+        flex-direction: column;
+    }
+    .resume-section__technologies-used span {
+        margin-top: 4px;
     }
 }

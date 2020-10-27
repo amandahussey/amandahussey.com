@@ -26,7 +26,6 @@ class Home extends Component {
 
 
         if (topScroll > (2 * windowHeight)){
-            console.log('nav now fixed')
             this.handleFixNav()
         }
 
@@ -37,22 +36,20 @@ class Home extends Component {
             windowHeight = window.innerHeight;
 
             if (topScroll > (2 * windowHeight)){
-                console.log('nav now fixed')
-                this.handleFixNav()
+                this.handleFixNav('fix')
             }
 
-            if (topScroll > (2 * windowHeight)){
-                console.log('nav now fixed')
-                this.handleFixNav()
+            if(topScroll <= (2 * windowHeight)){
+                this.handleFixNav('unfix')
             }
 
             const percentage = topScroll / (2 * windowHeight)
-            console.log('percentage', percentage)
+            // console.log('percentage', percentage)
             if(percentage < 1) document.body.style.setProperty('--scroll', percentage)
 
-            console.log('topScroll', topScroll)
-            console.log('bottomScroll', bottomScroll)
-            console.log('windowHeight', windowHeight)
+            // console.log('topScroll', topScroll)
+            // console.log('bottomScroll', bottomScroll)
+            // console.log('windowHeight', windowHeight)
 
 
 
@@ -79,20 +76,21 @@ class Home extends Component {
         }, false);
     }
 
-    handleFixNav = () => {
-        this.setState({
-            navIsFixed: true
-        })
+    handleFixNav = (fixOrUnfix) => {
+        console.log('fixOrUnfix', fixOrUnfix)
+        if(fixOrUnfix === 'fix') this.setState({ navIsFixed: true })
+        else if(fixOrUnfix === 'unfix') this.setState({ navIsFixed: false })
     }
 
     render (){
 
         const { navIsFixed } = this.state
+        console.log('navIsFixed', navIsFixed)
    
         return (
             <div>
-                <Landing fixed={navIsFixed} />
-                <Nav fixed={navIsFixed} />
+                <Landing navIsFixed={navIsFixed} />
+                <Nav />
                 <About past={true}/>
                 <Resume />
                 <About />
