@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import chainSvgLink from './chain.svg';
 import chainPullSvgLink from './chain-pull.svg'
-import './SwingingChain.css';
+import './SwingingChain.css'
 
 const SwingingChain = (props) => {
 

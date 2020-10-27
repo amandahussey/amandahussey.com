@@ -3,13 +3,13 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 
 import './App.css';
 
 import Home from './Home'
-import WallpaperWall from './WallpaperWall'
+import Resume from './Resume'
+import RikuPage from './RikuPage'
 
 class App extends Component {
   constructor(){
@@ -22,16 +22,22 @@ class App extends Component {
   render (){
 
     return (
-      <Router>
-        <Switch>
-          <Route path="/wall">
-            <WallpaperWall />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </Router>
+      <div>
+			<Router>
+				<Switch>
+					<Route path="/resume">
+						<Resume />
+					</Route>
+					<Route path="/riku">
+						<RikuPage />
+					</Route>
+					<Route path="/">
+						<Home />
+					</Route>
+				</Switch>
+			</Router>
+      </div>
+      
     );
   }
 }
