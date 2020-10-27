@@ -58,10 +58,10 @@
   
 @keyframes slide-in-1 {
     from {
-        transform: translateX(-500px);
+        transform: translateX(1000px);
     }
     to {
-        transform: translateX(1000px);
+        transform: translateX(-500px);
     }
 }
 
