@@ -88,6 +88,23 @@
     .resume-section__title {
         font-size: 50px;
     }
+    .resume-section__header {
+        text-align: left;
+    }
+    .resume-section__header  h1 {
+        margin-bottom: 0px;
+        font-size: 1.5em;
+    }
+    .resume-section__header  h2 {
+        font-size: 1em;
+        margin-top: 6px;
+    }
+    .resume-section h3 {
+        font-size: .9em;
+    }
+    .resume-section p {
+        font-size: .8em;
+    }
     #uic {
         text-align: left;
     }
@@ -95,12 +112,19 @@
 
 @media only screen and (max-width: 400px) {
     .resume-container {
-        width: 90vw;
+        width: 80vw;
+        margin-top: 60px;
+        margin-bottom: 60px;
     }
     .resume-section__title {
         font-size: 40px;
+        margin-bottom: 48px;
+    }
+    .resume-section__sub-title {
+        flex-direction: column;
     }
     #uic {
         text-align: left;
+        margin-bottom: 40px;
     }
 }
