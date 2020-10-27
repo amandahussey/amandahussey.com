@@ -1,5 +1,5 @@
-@import 'colors';
-@import 'fonts';
+@import '../../global-styles/colors';
+@import '../../global-styles/fonts';
 
 #landing__container {
     background: $primary-color;
@@ -55,7 +55,7 @@
 }
 
 // "Amanda Hussey" -- Desktop
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1100px) {
 
     @keyframes zoom-out-name {
         0% {
@@ -76,7 +76,7 @@
 }
 
 // "Software Developer" -- Desktop
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1100px) {
     @keyframes zoom-out-title {
         0% {
             font-size: 0px;

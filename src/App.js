@@ -1,16 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-} from "react-router-dom";
+} from "react-router-dom"
 
-import './App.css';
-
-import Home from './Home'
-import About from './About'
-import Resume from './Resume'
-import RikuPage from './RikuPage'
+import Home from './components/Home/Home'
+import RikuPage from './components/Riku/RikuPage'
 
 class App extends Component {
   constructor(){
@@ -26,12 +22,6 @@ class App extends Component {
       <div>
 			<Router>
 				<Switch>
-					<Route path="/about">
-						<About />
-					</Route>
-					<Route path="/resume">
-						<Resume />
-					</Route>
 					<Route path="/riku">
 						<RikuPage />
 					</Route>

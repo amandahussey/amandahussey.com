@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import './Home.scss'
 
-import Landing from './Landing'
-import Nav from './Nav'
-import About from './About'
-import Resume from './Resume'
+import Landing from '../Landing/Landing'
+import Nav from '../Nav/Nav'
+import About from '../About/About'
+import Resume from '../Resume/Resume'
 import { isCompositeComponent } from 'react-dom/test-utils'
 
 class Home extends Component {
