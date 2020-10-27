@@ -28,6 +28,7 @@
 
 .about-container h3 {
     font-family: $paragraph-font;
+    font-weight: normal;
 }
 
 .about__section {
@@ -55,13 +56,25 @@
     animation-delay: calc(var(--scroll-2) * -1s);
 }
 
-  
-@keyframes slide-in-1 {
-    from {
-        transform: translateX(1000px);
+@media only screen and (max-width: 600px) {
+    @keyframes slide-in-1 {
+        from {
+            transform: translateX(100px);
+        }
+        to {
+            transform: translateX(-100px);
+        }
     }
-    to {
-        transform: translateX(-500px);
+}
+
+@media only screen and (min-width: 600px) {
+    @keyframes slide-in-1 {
+        from {
+            transform: translateX(1000px);
+        }
+        to {
+            transform: translateX(-500px);
+        }
     }
 }
 
@@ -73,3 +86,5 @@
         transform: translateX(0px);
     }
 }
+
+
