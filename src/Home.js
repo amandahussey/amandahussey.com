@@ -13,6 +13,8 @@ class Home extends Component {
         this.state = {
             navIsFixed: false,
             topScroll: window.scrollY,
+            bottomScroll: window.scrollY + window.innerHeight,
+            windowWidth: window.innerWidth,
             windowHeight: window.innerHeight,
             documentHeight: document.body.offsetHeight,
         }
@@ -20,10 +22,8 @@ class Home extends Component {
 
     componentDidMount(){
 
-        let topScroll = window.scrollY;
-        let bottomScroll = window.scrollY + window.innerHeight;
-        let windowHeight = window.innerHeight;
-        const documentHeight = document.body.offsetHeight
+        let { topScroll, bottomScroll, windowHeight, documentHeight } = this.state
+
 
         if (topScroll > (2 * windowHeight)){
             console.log('nav now fixed')
