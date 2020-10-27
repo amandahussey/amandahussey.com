@@ -11,7 +11,10 @@ class Home extends Component {
     constructor(){
         super()
         this.state = {
-            navIsFixed: false
+            navIsFixed: false,
+            topScroll: window.scrollY,
+            windowHeight: window.innerHeight,
+            documentHeight: document.body.offsetHeight,
         }
     }
 

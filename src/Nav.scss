@@ -1,11 +1,27 @@
 @import 'colors';
 @import 'fonts';
 
-#nav-container {
-    background: $primary-color;
-    height: 90px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
+
+@media only screen and (min-width: 600px) {
+    #nav-container {
+        background: $primary-color;
+        height: 90px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        z-index: 2;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #nav-container {
+        background: $primary-color;
+        height: 50px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        z-index: 2;
+    }
 }
