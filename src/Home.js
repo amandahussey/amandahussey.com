@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './Home.scss'
 
 import Landing from './Landing'
+import Nav from './Nav'
 import About from './About'
 import Resume from './Resume'
 import { isCompositeComponent } from 'react-dom/test-utils'
@@ -10,7 +11,7 @@ class Home extends Component {
     constructor(){
         super()
         this.state = {
-        
+            navIsFixed: false
         }
     }
 
@@ -19,43 +20,27 @@ class Home extends Component {
         const windowHeight = window.innerHeight
         const documentHeight = document.body.offsetHeight
 
-        // const aboutElmt1 = document.getElementById('about-section--past')
-        // console.log('aboutElmt1', aboutElmt1)
-        // const rect1 = aboutElmt1.getBoundingClientRect()
-        // console.log('rect1',rect1)
-        // const top1 = rect1.top
-        // const bottom1 = rect1.bottom
-        // const height1 = rect1.height
-        // const beginAnimation1 = top1 - height1
-        // console.log('beginAnimation1', beginAnimation1)
-        // const endAnimation1 = bottom1 + windowHeight
-        // console.log('endAnimation1', endAnimation1)
-
-        // const aboutElmt2 = document.getElementById('about-section--future')
-        // console.log('aboutElmt2', aboutElmt2)
-        // const rect2 = aboutElmt2.getBoundingClientRect()
-        // console.log('rect2',rect2)
-        // const height2 = rect2.height
-        // const top2 = rect2.top
-        // const bottom2 = rect2.bottom
-        // const beginAnimation2 = top2 - height2
-        // console.log('beginAnimation2', beginAnimation2)
-        // const endAnimation2 = documentHeight
-        // console.log('endAnimation2', endAnimation2)
-
         window.addEventListener('scroll', () => {
             
             let topScroll = window.scrollY;
             let bottomScroll = window.scrollY + window.innerHeight;
             let windowHeight = window.innerHeight;
 
+            if (topScroll > (2 * windowHeight)){
+                console.log('nav now fixed')
+                this.handleFixNav()
+            }
+
             const percentage = topScroll / (2 * windowHeight)
             console.log('percentage', percentage)
-            document.body.style.setProperty('--scroll', percentage)
+            if(percentage < 1) document.body.style.setProperty('--scroll', percentage)
 
-            // console.log('topScroll', topScroll)
+            console.log('topScroll', topScroll)
             console.log('bottomScroll', bottomScroll)
             console.log('windowHeight', windowHeight)
+
+
+
             // console.log('bottomScrollMod', bottomScrollMod)
             // console.log('documentHeight', documentHeight)
 
@@ -79,14 +64,23 @@ class Home extends Component {
         }, false);
     }
 
+    handleFixNav = () => {
+        this.setState({
+            navIsFixed: true
+        })
+    }
+
     render (){
+
+        const { navIsFixed } = this.state
    
         return (
             <div>
-                <Landing />
-                {/* <About past={true}/>
+                <Landing fixed={navIsFixed} />
+                <Nav fixed={navIsFixed} />
+                <About past={true}/>
                 <Resume />
-                <About /> */}
+                <About />
             </div>
             
         );

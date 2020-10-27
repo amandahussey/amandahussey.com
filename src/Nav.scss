@@ -1,0 +1,11 @@
+@import 'colors';
+@import 'fonts';
+
+#nav-container {
+    background: $primary-color;
+    height: 90px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}

@@ -17,8 +17,10 @@
     font-size: 100px;
     text-shadow: 0 2px 0 #E91E63;
     width: 100vw;
+    
 
     position: fixed;
+    z-index: 1;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -26,7 +28,24 @@
     animation: zoom-out--h1 1s linear infinite;
     animation-play-state: paused;
     animation-delay: calc(var(--scroll) * -1s);
+
+    
 }
+
+
+#landing__text-container h1.fixed-nav {
+    font-family: $dramatic-font;
+    text-align: center;
+    font-size: 100px;
+    text-shadow: 0 2px 0 #E91E63;
+    width: 100vw;
+
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
 
 #landing__text-container h2 {
     font-family: $paragraph-font;
@@ -43,21 +62,41 @@
     animation-play-state: paused;
     animation-delay: calc(var(--scroll) * -1s);
 }
+
+.fixed {
+    position: fixed;
+    top: 0;
+}
   
 @keyframes zoom-out--h1 {
-    from {
+    0% {
         font-size: 28px;
     }
-    to {
+    50% {
         font-size: 140px;
+    }
+    100% {
+        font-size: 56px;
+        top: 0;
     }
 }
 
 @keyframes zoom-out--h2 {
-    from {
+    0% {
         font-size: 0px;
     }
-    to {
+    30% {
+        text-shadow: none;
+    }
+    50% {
         font-size: 1.5em;
+        opacity: 1;
+        top: 40%;
+    }
+    70% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
     }
 }
