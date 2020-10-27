@@ -44,7 +44,7 @@ class Home extends Component {
             }
 
             const percentage = topScroll / (2 * windowHeight)
-            // console.log('percentage', percentage)
+            console.log('percentage', percentage)
             if(percentage < 1) document.body.style.setProperty('--scroll', percentage)
 
             // console.log('topScroll', topScroll)
