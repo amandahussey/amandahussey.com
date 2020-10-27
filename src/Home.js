@@ -50,34 +50,27 @@ class Home extends Component {
             // console.log('topScroll', topScroll)
             // console.log('bottomScroll', bottomScroll)
             // console.log('windowHeight', windowHeight)
-
-
-
             // console.log('bottomScrollMod', bottomScrollMod)
             // console.log('documentHeight', documentHeight)
 
             // const beginAnimation1 = windowHeight + (.37 * windowHeight) //  1467
             // const endAnimation1 = (2 * windowHeight) + (.66 * windowHeight)   // 2867
-            const beginAnimation1 = 2667
-            const endAnimation1 = 4067
-            const percent1 = (bottomScroll - beginAnimation1) / (endAnimation1 - beginAnimation1);
-            document.body.style.setProperty('--scroll-1', percent1);
+            // const beginAnimation1 = 2667
+            // const endAnimation1 = 4067
+            // const percent1 = (bottomScroll - beginAnimation1) / (endAnimation1 - beginAnimation1);
+            // document.body.style.setProperty('--scroll-1', percent1);
 
             // const beginAnimation2 = (4 * windowHeight) + (.95 * windowHeight) // 5275
             // const endAnimation2 = documentHeight // 6075
-            const beginAnimation2 = 6667
-            const endAnimation2 = 6075
-            const percent2 = (bottomScroll - beginAnimation2) / (endAnimation2 - beginAnimation2);
-            document.body.style.setProperty('--scroll-2', percent2);
-
-            
-            
+            // const beginAnimation2 = 6667
+            // const endAnimation2 = 6075
+            // const percent2 = (bottomScroll - beginAnimation2) / (endAnimation2 - beginAnimation2);
+            // document.body.style.setProperty('--scroll-2', percent2);
 
         }, false);
     }
 
     handleFixNav = (fixOrUnfix) => {
-        console.log('fixOrUnfix', fixOrUnfix)
         if(fixOrUnfix === 'fix') this.setState({ navIsFixed: true })
         else if(fixOrUnfix === 'unfix') this.setState({ navIsFixed: false })
     }
@@ -85,7 +78,6 @@ class Home extends Component {
     render (){
 
         const { navIsFixed } = this.state
-        console.log('navIsFixed', navIsFixed)
    
         return (
             <div>

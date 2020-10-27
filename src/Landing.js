@@ -10,9 +10,8 @@ class Landing extends Component {
     }
 
     render (){
+        
         const { navIsFixed } = this.props 
-
-        console.log('navIsFixed', navIsFixed)
 
         return (
             <div id='landing__container'>
