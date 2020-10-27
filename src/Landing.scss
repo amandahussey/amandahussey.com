@@ -1,29 +1,44 @@
 @import 'colors';
 @import 'fonts';
 
-#landing-container {
-    min-height: 100vh;
+#landing__container {
     background: $primary-color;
     color: $secondary-color;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
-#landing-container h1 {
+#landing__text-container {
+    min-height: 220vh;
+    overflow: auto;
+}
+
+#landing__text-container h1 {
     font-family: $dramatic-font;
     text-align: center;
     font-size: 100px;
     text-shadow: 0 2px 0 #E91E63;
+    width: 100vw;
+
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
     animation: zoom-out--h1 1s linear infinite;
     animation-play-state: paused;
     animation-delay: calc(var(--scroll) * -1s);
 }
 
-#landing-container h2 {
+#landing__text-container h2 {
     font-family: $paragraph-font;
+    text-align: center;
     text-shadow: 0 2px 0 #E91E63;
+    width: 100vw;
+
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
     animation: zoom-out--h2 1s linear infinite;
     animation-play-state: paused;
     animation-delay: calc(var(--scroll) * -1s);
@@ -31,22 +46,18 @@
   
 @keyframes zoom-out--h1 {
     from {
-        font-size: 100px;
-        transform: translateY(0);
+        font-size: 28px;
     }
     to {
-        font-size: 20px;
-        transform: translateY(calc(--innerHeight * 2));
+        font-size: 140px;
     }
 }
 
 @keyframes zoom-out--h2 {
     from {
-        font-size: 1.5em;
-        transform: translateY(0);
+        font-size: 0px;
     }
     to {
-        font-size: 0px;
-        transform: translateY(calc(--innerHeight * 2));
+        font-size: 1.5em;
     }
 }

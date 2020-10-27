@@ -70,10 +70,10 @@
 @media only screen and (min-width: 600px) {
     @keyframes slide-in-1 {
         from {
-            transform: translateX(1000px);
+            transform: translateX(100vw);
         }
         to {
-            transform: translateX(-500px);
+            transform: translateX(-100vw);
         }
     }
 }
