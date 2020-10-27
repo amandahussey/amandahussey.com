@@ -1,15 +1,3 @@
 @import 'colors';
+@import 'fonts';
 
-#home-container {
-    min-height: 100vh;
-    background: $primary-color;
-    color: $secondary-color;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#home-container div {
-    padding: 24px;
-    text-align: center;
-}

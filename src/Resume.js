@@ -24,11 +24,13 @@ class Resume extends Component {
                             <h1>Zayo Group</h1>
                             <h2>May 2020 - Sept 2020</h2>
                         </div>
-                        <div className='resume-section__description'>
-                            <h3>Application Developer</h3>
-                            <p>[ React + Redux ] [ AngularJS ] [ NodeJS ]</p>
-                            <p>Greatest Contribution: Worked closely with designer to develop strategies to deliver best practices for UI/UX.</p>
-                            <p>Takeaway: I value good UI/UX.</p>
+
+                        <h3>Application Developer</h3>
+                        <p>[ React + Redux ] [ AngularJS ] [ NodeJS ]</p>
+
+                        <div className='resume-section__description'> 
+                            <p><span>Greatest Contribution:</span> Worked closely with designer to develop strategies to deliver best practices for UI/UX.</p>
+                            <p className='resume-section__description__takeaway'>I emphasize UI/UX.</p>
                         </div>
                     </div>
 
@@ -37,13 +39,15 @@ class Resume extends Component {
                             <h1>The Green Solution</h1>
                             <h2>Sept 2019 - May 2020</h2>
                         </div>
+
+                        <h3>Front End Developer</h3>
+                        <p>[ React + Redux ] [ jQuery + ES6 template literals ]</p>
+
                         <div className='resume-section__description'>
-                            <h3>Front End Developer</h3>
-                            <p>[ React + Redux ] [ jQuery + ES6 template literals ]</p>
-                            <p>Proudest Moment: Led 10+ project scoping meetings in Q4 2019, which received positive feedback through to executive level, 
+                            <p><span>Proudest Moment:</span> Led 10+ project scoping meetings in Q4 2019, which received positive feedback through to executive level, 
                                 due to ability to communicate technical concepts to non-technical employees, 
                                 as well as ability to interpret user needs into technical requirements.</p>
-                            <p>Takeaway: I make a decent middle man.</p>
+                            <p className='resume-section__description__takeaway'>I make a decent middle man.</p>
                         </div>
                     </div>
 
@@ -52,18 +56,19 @@ class Resume extends Component {
                             <h1>EVS LLC</h1>
                             <h2>July 2018 - April 2019</h2>
                         </div>
-                        <div className='resume-section__description'>
-                            <h3>Junior Software Developer</h3>
-                            <p>[ AngularJS ] [ SQL (SSMS) ]</p>
 
-                            <p>Greatest Accomplishment: The Pack Station!</p>
+                        <h3>Junior Software Developer</h3>
+                        <p>[ AngularJS ] [ SQL (SSMS) ]</p>
+
+                        <div className='resume-section__description'>
+                            <p><span>Greatest Accomplishment:</span> The Pack Station!</p>
 
                             <p>A key feature of the web application developed using AngularJS, original CSS, and existing business logic.
                             Final UI designed by me, as an alternative to the mockup provided. 
                             Feature used heavily in sales demos and planned to be used in an advertising campaign. 
                             I wish I had screenshots to share!</p>
 
-                            <p>Takeaway: I offer alternative solutions.</p>
+                            <p className='resume-section__description__takeaway'>I offer alternative solutions.</p>
 
                         </div>
                     </div>
@@ -103,8 +108,7 @@ class Resume extends Component {
                                     <h3>Undergraduate Researcher</h3>
                                     <h3>Oct 2012 - April 2013</h3>
                                 </div>
-                                <p>Actually discovered stuff!</p>
-                                <p>Ask me about the behavior of a given quadratic irrational's continued fraction expansion when multiplied by two ;)</p>
+                                <p>Ask me about the behavior of a given quadratic irrational's continued fraction expansion when multiplied by two.</p>
                             </div>
                         </div>
                     </div>

@@ -1,7 +1,7 @@
 @import 'colors';
+@import 'fonts';
 
 .resume-parent-container {
-    font-family: 'Roboto Mono';
     overflow: auto;
 }
 
@@ -14,6 +14,10 @@
 #mathematics {
     background: $secondary-color;
     color: $primary-color; 
+}
+
+#uic {
+    margin-bottom: 80px;
 }
 
 .resume-container {
@@ -36,6 +40,7 @@
 .resume-section__sub-title {
     display: flex;
     justify-content: space-between;
+    font-family: $header-font;
 }
 
 .resume-section__description-container {
@@ -45,14 +50,15 @@
 
 .resume-section__description {
     margin-bottom: 70px;
+    font-family: $paragraph-font;
 }
 
-.resume-section__icons-container {
-
+.resume-section__description span {
+    font-family: $header-font;
 }
 
-.resume-section__icon {
-    width: 30px;
+.resume-section__description__takeaway {
+    font-family: $header-font;
 }
 
 

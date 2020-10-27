@@ -8,6 +8,7 @@ import {
 import './App.css';
 
 import Home from './Home'
+import About from './About'
 import Resume from './Resume'
 import RikuPage from './RikuPage'
 
@@ -25,6 +26,9 @@ class App extends Component {
       <div>
 			<Router>
 				<Switch>
+					<Route path="/about">
+						<About />
+					</Route>
 					<Route path="/resume">
 						<Resume />
 					</Route>

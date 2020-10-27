@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import './Home.scss'
 
+import Landing from './Landing'
+import About from './About'
+import Resume from './Resume'
 
 class Home extends Component {
     constructor(){
@@ -10,14 +13,22 @@ class Home extends Component {
         }
     }
 
-  
+    componentDidMount(){
+        window.addEventListener('scroll', () => {
+            document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+        }, false);
+    }
 
-  render (){
+    render (){
    
         return (
-            <div id='home-container'>
-                <div>Learning to express myself in a digital way.</div>
+            <div>
+                <Landing />
+                <About />
+                <Resume />
+                <About future={true} />
             </div>
+            
         );
     }
 }

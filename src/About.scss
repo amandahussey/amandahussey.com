@@ -1,0 +1,39 @@
+@import 'colors';
+@import 'fonts';
+
+.about-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: $secondary-color;
+    color: $primary-color;
+    flex-direction: column;
+}
+
+.about-container--past {
+    background: $secondary-color;
+    color: $primary-color;
+}
+
+.about-container--future {
+    background: $primary-color;
+    color: $secondary-color;
+    text-align: right;
+}
+
+.about-container h1 {
+    font-family: $dramatic-font;
+    font-size: 100px;
+}
+
+.about-container h3 {
+    font-family: $paragraph-font;
+}
+
+.about__section {
+    margin: 60px;
+}
+
+.about__where-going {
+    text-align: right;
+}
