@@ -13,20 +13,14 @@ class Home extends Component {
         }
     }
 
-    componentDidMount(){
-        window.addEventListener('scroll', () => {
-            document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
-        }, false);
-    }
-
     render (){
    
         return (
             <div>
                 <Landing />
-                <About />
+                <About past={true}/>
                 <Resume />
-                <About future={true} />
+                <About />
             </div>
             
         );

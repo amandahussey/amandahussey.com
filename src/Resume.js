@@ -19,7 +19,7 @@ class Resume extends Component {
                 <div className='resume-container'>
                     <h1 className='resume-section__title'>Software Development</h1>
                     
-                    <div class='resume-section'>
+                    <div className='resume-section'>
                         <div className='resume-section__header'>
                             <h1>Zayo Group</h1>
                             <h2>May 2020 - Sept 2020</h2>
@@ -34,7 +34,7 @@ class Resume extends Component {
                         </div>
                     </div>
 
-                    <div class='resume-section'>
+                    <div className='resume-section'>
                         <div className='resume-section__header'>
                             <h1>The Green Solution</h1>
                             <h2>Sept 2019 - May 2020</h2>
@@ -51,7 +51,7 @@ class Resume extends Component {
                         </div>
                     </div>
 
-                    <div class='resume-section'>
+                    <div className='resume-section'>
                         <div className='resume-section__header'>
                             <h1>EVS LLC</h1>
                             <h2>July 2018 - April 2019</h2>
@@ -77,7 +77,7 @@ class Resume extends Component {
                 <div id='mathematics' className='resume-parent-container'>
                     <div className='resume-container'>
                         <h1 className='resume-section__title'>Mathematics</h1>
-                        <div class='resume-section'>
+                        <div className='resume-section'>
                             <div className='resume-section__header'>
                                 <h1 id='uic'>University of Illinois at Chicago</h1>
                             </div>

@@ -16,10 +16,37 @@
     text-align: center;
     font-size: 100px;
     text-shadow: 0 2px 0 #E91E63;
-
+    animation: zoom-out--h1 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
 }
 
 #landing-container h2 {
     font-family: $paragraph-font;
     text-shadow: 0 2px 0 #E91E63;
+    animation: zoom-out--h2 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+}
+  
+@keyframes zoom-out--h1 {
+    from {
+        font-size: 100px;
+        transform: translateY(0);
+    }
+    to {
+        font-size: 20px;
+        transform: translateY(calc(--innerHeight * 2));
+    }
+}
+
+@keyframes zoom-out--h2 {
+    from {
+        font-size: 1.5em;
+        transform: translateY(0);
+    }
+    to {
+        font-size: 0px;
+        transform: translateY(calc(--innerHeight * 2));
+    }
 }
