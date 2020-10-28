@@ -30,7 +30,7 @@
 }
 
 .resume-section {
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 }
 
 .resume-section__header {
@@ -43,13 +43,18 @@
     font-family: $header-font;
 }
 
+.resume-section__sub-title h3 {
+    margin: 0;
+}
+
 .resume-section__description-container {
     display: flex;
     justify-content: space-between;
 }
 
 .resume-section__description {
-    margin-bottom: 70px;
+    margin-bottom: 60px;
+    margin-top: 20px;
     font-family: $paragraph-font;
 }
 .resume-section__technologies-used {
