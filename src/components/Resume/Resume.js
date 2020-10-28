@@ -34,7 +34,7 @@ class Resume extends Component {
                         <div className='resume-section__description'> 
                             <div className='resume-section__description__greatest-moment'>Greatest Contribution:</div>
                             <div className='resume-section__description__paragraph'>   
-                                <p>Worked closely with designer to develop strategies around delivering best practices for UI/UX.</p>
+                                <p>Worked closely with designer to help develop strategies around delivering best UI/UX practices.</p>
                             </div>
                             {/* <p className='resume-section__description__takeaway'>I value UI/UX.</p> */}
                         </div>
@@ -55,7 +55,7 @@ class Resume extends Component {
                         <div className='resume-section__description'>
                             <div className='resume-section__description__greatest-moment'>Proudest Moment:</div>
                             <div className='resume-section__description__paragraph'>   
-                                <p>Led 10+ project scoping meetings in Q4 2019, which received positive feedback all around!</p> 
+                                <p>Led 10+ project scoping meetings, which received positive feedback all around!</p> 
                                 <p>I enjoyed being a go-between of sorts, helping bridge the gap between techincal and non-technical.</p> 
                             </div>
                             {/* <p className='resume-section__description__takeaway'>I bridge the gap between technical and non-technical.</p> */}
@@ -104,14 +104,14 @@ class Resume extends Component {
                             </div>
                             <div className='resume-section__description'>
                                 <div className='resume-section__sub-title'>
-                                    <h3>Math Teaching Assistant</h3>
+                                    <h3>Teaching Assistant</h3>
                                     <h3>Aug 2014 - Oct 2015</h3>
                                 </div>
                                 <p>Awarded Honorable Mention for Outstanding Teaching</p>
                             </div>
                             <div className='resume-section__description'>
                                 <div className='resume-section__sub-title'>
-                                    <h3>B.S. in Mathematics</h3>
+                                    <h3>Bachelor of Science in Mathematics</h3>
                                     <h3>Aug 2010 - May 2014</h3>
                                 </div>
                                 <p>Magna Cum Laude</p>
