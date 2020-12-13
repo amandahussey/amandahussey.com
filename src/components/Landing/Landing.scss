@@ -7,7 +7,7 @@
 }
 
 #landing__text-container {
-    min-height: 220vh;
+    min-height: 100vh;
     overflow: auto;
 }
 
@@ -15,12 +15,12 @@
     font-family: $dramatic-font;
     text-align: center;
     font-size: 100px;
-    // text-shadow: 0 2px 0 #E91E63;
+    text-shadow: 0 2px 0 $pop-color;
     width: 100vw;
     
     position: fixed;
     z-index: 3;
-    top: 50%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -32,7 +32,8 @@
 #landing__text-container__software-dev {
     font-family: $paragraph-font;
     text-align: center;
-    // text-shadow: 0 2px 0 #E91E63;
+    font-size: 30px;
+    text-shadow: 0 2px 0 $pop-color;
     width: 100vw;
 
     position: fixed;
@@ -59,14 +60,7 @@
 
     @keyframes zoom-out-name {
         0% {
-            font-size: 28px;
-        }
-        50% {
             font-size: 140px;
-            top: 30%;
-        }
-        70% {
-            top: 10%;
         }
         100% {
             font-size: 56px;
@@ -79,18 +73,7 @@
 @media only screen and (min-width: 1100px) {
     @keyframes zoom-out-title {
         0% {
-            font-size: 0px;
-        }
-        50% {
-            font-size: 1.5em;
-        }
-        60% {
-            opacity: 0.9;
-            top: 50%;
-        }
-        70% {
-            opacity: .7;
-            top: 40%;
+            opacity: 1;
         }
         100% {
             opacity: 0;

@@ -30,9 +30,9 @@ class About extends Component {
 
             <div id='about--future' className='about-container'>
                 <div id='about-section--future' className='about-section'>
-                    <h1>Where I'm Going</h1>
-                    <h3>My dream is to create video games.</h3>
-                    <h3>I'm starting with Unity/C#.</h3>
+                    <h1>Beyond the Web</h1>
+                    <h3>I'm currently dabbling in game and app development using Unity/C#.</h3>
+                    <h3>One project includes a pixel cat. The other, Bluetooth.</h3>
                     <h3>Stay tuned for updates!</h3>
                 </div>
             </div>

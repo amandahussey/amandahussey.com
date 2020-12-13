@@ -34,7 +34,8 @@ class Resume extends Component {
                         <div className='resume-section__description'> 
                             <div className='resume-section__description__greatest-moment'>Greatest Contribution:</div>
                             <div className='resume-section__description__paragraph'>   
-                                <p>Worked closely with designer to help develop strategies around delivering best UI/UX practices.</p>
+                                <p>Worked closely with designer to develop strategies around delivering best UI/UX practices.</p>
+                                <p>Onboarded junior hire. I truly enjoyed acting as a teacher/mentor!</p>
                             </div>
                             {/* <p className='resume-section__description__takeaway'>I value UI/UX.</p> */}
                         </div>
@@ -55,7 +56,7 @@ class Resume extends Component {
                         <div className='resume-section__description'>
                             <div className='resume-section__description__greatest-moment'>Proudest Moment:</div>
                             <div className='resume-section__description__paragraph'>   
-                                <p>Led 10+ project scoping meetings, which received positive feedback all around!</p> 
+                                <p>Led 10+ project scoping meetings, which received positive feedback through to executive level.</p> 
                                 <p>I enjoyed being a go-between of sorts, helping bridge the gap between techincal and non-technical.</p> 
                             </div>
                             {/* <p className='resume-section__description__takeaway'>I bridge the gap between technical and non-technical.</p> */}
@@ -79,7 +80,7 @@ class Resume extends Component {
                             <div className='resume-section__description__greatest-moment'>Greatest Accomplishment:</div>
                             <div className='resume-section__description__paragraph'>   
                                 <p>The Pack Station - A key feature of the web app. UI designed by me!</p>
-                                <p>Executives loved it so much, that they made sure it was shown in all major sales demos. They even planned to use it in an advertising campaign!</p>
+                                <p>Executives loved it so much, that they made sure it was shown in all major sales demos. It was even planned to be used in an advertising campaign.</p>
                             </div>
 
                             {/* <p className='resume-section__description__takeaway'>I offer alternative solutions.</p> */}
@@ -114,8 +115,7 @@ class Resume extends Component {
                                     <h3>Bachelor of Science in Mathematics</h3>
                                     <h3>Aug 2010 - May 2014</h3>
                                 </div>
-                                <p>Magna Cum Laude</p>
-                                <p>GPA: 3.8</p>
+                                <p>GPA: 3.8 | Magna Cum Laude</p>
                             </div>
                             <div className='resume-section__description'>
                                 <div className='resume-section__sub-title'>

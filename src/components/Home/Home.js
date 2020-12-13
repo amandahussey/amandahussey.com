@@ -5,67 +5,42 @@ import Landing from '../Landing/Landing'
 import Nav from '../Nav/Nav'
 import About from '../About/About'
 import Resume from '../Resume/Resume'
-import { isCompositeComponent } from 'react-dom/test-utils'
 
 class Home extends Component {
     constructor(){
         super()
         this.state = {
             navIsFixed: false,
-            topScroll: window.scrollY,
-            bottomScroll: window.scrollY + window.innerHeight,
+            scrollY: window.scrollY,
             windowWidth: window.innerWidth,
             windowHeight: window.innerHeight,
-            documentHeight: document.body.offsetHeight,
         }
     }
 
     componentDidMount(){
 
-        let { topScroll, bottomScroll, windowHeight, documentHeight } = this.state
+        let { scrollY, windowHeight } = this.state
 
 
-        if (topScroll > (2 * windowHeight)){
+        if (scrollY > (windowHeight)){
             this.handleFixNav()
         }
 
         window.addEventListener('scroll', () => {
             
-            topScroll = window.scrollY;
-            bottomScroll = window.scrollY + window.innerHeight;
+            scrollY = window.scrollY;
             windowHeight = window.innerHeight;
 
-            if (topScroll > (2 * windowHeight)){
+            if (scrollY > windowHeight){
                 this.handleFixNav('fix')
             }
 
-            if(topScroll <= (2 * windowHeight)){
+            if(scrollY <= windowHeight){
                 this.handleFixNav('unfix')
             }
 
-            const percentage = topScroll / (2 * windowHeight)
-            console.log('percentage', percentage)
+            const percentage = scrollY / windowHeight
             if(percentage < 1) document.body.style.setProperty('--scroll', percentage)
-
-            // console.log('topScroll', topScroll)
-            // console.log('bottomScroll', bottomScroll)
-            // console.log('windowHeight', windowHeight)
-            // console.log('bottomScrollMod', bottomScrollMod)
-            // console.log('documentHeight', documentHeight)
-
-            // const beginAnimation1 = windowHeight + (.37 * windowHeight) //  1467
-            // const endAnimation1 = (2 * windowHeight) + (.66 * windowHeight)   // 2867
-            // const beginAnimation1 = 2667
-            // const endAnimation1 = 4067
-            // const percent1 = (bottomScroll - beginAnimation1) / (endAnimation1 - beginAnimation1);
-            // document.body.style.setProperty('--scroll-1', percent1);
-
-            // const beginAnimation2 = (4 * windowHeight) + (.95 * windowHeight) // 5275
-            // const endAnimation2 = documentHeight // 6075
-            // const beginAnimation2 = 6667
-            // const endAnimation2 = 6075
-            // const percent2 = (bottomScroll - beginAnimation2) / (endAnimation2 - beginAnimation2);
-            // document.body.style.setProperty('--scroll-2', percent2);
 
         }, false);
     }
