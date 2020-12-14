@@ -40,14 +40,15 @@ class Home extends Component {
         const { scrollY, windowHeight } = this.state
         if(scrollY > windowHeight) this.setState({ navIsFixed: true })
         else if(scrollY <= windowHeight) this.setState({ navIsFixed: false })
-
-        console.log('nameElmtScrollY:', nameElmtScrollY);
-        console.log('scrollY:', scrollY);
-        console.log('windowHeight:', windowHeight);
         
         // set --scroll property to be percentage scrolled down
         const percentage = scrollY / windowHeight
         if(percentage < 1) document.body.style.setProperty('--scroll', percentage)
+
+        console.log('nameElmtScrollY:', nameElmtScrollY);
+        console.log('scrollY:', scrollY);
+        console.log('windowHeight:', windowHeight);
+        console.log('percentage:', percentage);
     }
 
     render (){
