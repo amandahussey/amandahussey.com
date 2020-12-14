@@ -19,35 +19,33 @@ class Home extends Component {
 
     componentDidMount(){
 
-        let { scrollY, windowHeight } = this.state
-
+        const { scrollY, windowHeight } = this.state
 
         if (scrollY > (windowHeight)){
             this.handleFixNav()
         }
 
         window.addEventListener('scroll', () => {
-            
-            scrollY = window.scrollY;
-            windowHeight = window.innerHeight;
 
-            if (scrollY > windowHeight){
-                this.handleFixNav('fix')
-            }
+            this.setState({ 
+                scrollY: window.scrollY,
+                windowHeight: window.innerHeight
+            }, () => this.handleNav())
 
-            if(scrollY <= windowHeight){
-                this.handleFixNav('unfix')
-            }
-
-            const percentage = scrollY / windowHeight
-            if(percentage < 1) document.body.style.setProperty('--scroll', percentage)
 
         }, false);
     }
 
-    handleFixNav = (fixOrUnfix) => {
-        if(fixOrUnfix === 'fix') this.setState({ navIsFixed: true })
-        else if(fixOrUnfix === 'unfix') this.setState({ navIsFixed: false })
+    handleNav = () => {
+
+        // determine if navIsFixed or not based on scrollY compared to windowHeight
+        const { scrollY, windowHeight } = this.state
+        if(scrollY > windowHeight) this.setState({ navIsFixed: true })
+        else if(scrollY <= windowHeight) this.setState({ navIsFixed: false })
+        
+        // set --scroll property to be percentage scrolled down
+        const percentage = scrollY / windowHeight
+        if(percentage < 1) document.body.style.setProperty('--scroll', percentage)
     }
 
     render (){
