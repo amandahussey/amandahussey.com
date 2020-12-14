@@ -14,7 +14,6 @@
 #landing__text-container__name {
     font-family: $dramatic-font;
     text-align: center;
-    font-size: 100px;
     text-shadow: 0 2px 0 $pop-color;
     width: 100vw;
     
@@ -32,7 +31,6 @@
 #landing__text-container__software-dev {
     font-family: $paragraph-font;
     text-align: center;
-    font-size: 30px;
     text-shadow: 0 2px 0 $pop-color;
     width: 100vw;
 
@@ -46,18 +44,27 @@
     animation-delay: calc(var(--scroll) * -1s);
 }
 
-.fixed-name {
+.fix-name {
     top: 4px !important;
     font-size: 56px !important;
 }
 
-.remove-software-developer {
+.hide-title {
     z-index: -2;
 }
 
-// "Amanda Hussey" -- Desktop
+// Desktop
 @media only screen and (min-width: 1100px) {
 
+    #landing__text-container__name {
+        font-size: 140px;
+    }
+    
+    #landing__text-container__software-dev {
+        font-size: 30px;
+    }
+
+    // "Amanda Hussey"
     @keyframes zoom-out-name {
         0% {
             font-size: 140px;
@@ -67,10 +74,8 @@
             top: 4px;
         }
     }
-}
 
-// "Software Developer" -- Desktop
-@media only screen and (min-width: 1100px) {
+    // "Software Developer"
     @keyframes zoom-out-title {
         0% {
             opacity: 1;
@@ -82,93 +87,80 @@
     }
 }
 
-// "Amanda Hussey" -- Mobile
-@media only screen and (max-width: 600px) {
-
-    .fixed-name {
-        font-size: 30px !important;
-    }
-
-    @keyframes zoom-out-name {
-        0% {
-            font-size: 12px;
-        }
-        50% {
-            font-size: 48px;
-            top: 30%;
-        }
-        70% {
-            top: 10%;
-        }
-        100% {
-            font-size: 30px;
-            top: 4px;
-        }
-    }
-}
-
-// "Software Developer" -- Mobile
-@media only screen and (max-width: 600px) {
-    @keyframes zoom-out-title {
-        0% {
-            font-size: 0px;
-        }
-        50% {
-            font-size: 24px;
-        }
-        60% {
-            opacity: 0.9;
-        }
-        90% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 0;
-        }
-    }
-}
-
-// "Amanda Hussey" -- Tablet
+// Tablet
 @media only screen and (min-width: 600px) and (max-width: 1100px) {
 
+    // Set initial font sizes for device
+    #landing__text-container__name {
+        font-size: 60px;
+    }
+    
+    #landing__text-container__software-dev {
+        font-size: 30px;
+    }
+    
+
+    // "Amanda Hussey"
     @keyframes zoom-out-name {
         0% {
-            font-size: 28px;
-        }
-        50% {
-            font-size: 100px;
-            top: 30%;
-        }
-        70% {
-            top: 10%;
+            font-size: 75px;
         }
         100% {
             font-size: 56px;
             top: 4px;
         }
     }
-}
 
-// "Software Developer" -- Tablet
-@media only screen  and (min-width: 600px) and (max-width: 1100px) {
+    // "Software Developer"
     @keyframes zoom-out-title {
         0% {
-            font-size: 0px;
-        }
-        50% {
-            font-size: 1.5em;
-        }
-        60% {
-            opacity: 0.9;
-            top: 50%;
-        }
-        70% {
-            opacity: .7;
-            top: 40%;
+            opacity: 1;
         }
         100% {
             opacity: 0;
             top: 10%;
         }
     }
+}
+
+// Mobile
+@media only screen and (max-width: 600px) {
+
+    // Nav "Amanda Hussey"
+    .fix-name {
+        font-size: 30px !important;
+    }
+
+    // Set initial font sizes for device
+    #landing__text-container__name {
+        font-size: 50px;
+    }
+    
+    #landing__text-container__software-dev {
+        font-size: 20px;
+    }
+    
+
+    // "Amanda Hussey"
+    @keyframes zoom-out-name {
+        0% {
+            font-size: 50px;
+        }
+        100% {
+            font-size: 30px;
+            top: 4px;
+        }
+    }
+
+    // "Software Developer"
+    @keyframes zoom-out-title {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            top: 10%;
+        }
+    }
+    
 }
