@@ -1,6 +1,9 @@
+@import 'colors.scss';
+
 body {
   margin: 0;
   font-family: 'Roboto Mono';
+  background: $primary-color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
