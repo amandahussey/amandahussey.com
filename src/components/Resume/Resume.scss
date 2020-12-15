@@ -17,6 +17,7 @@
 
 #uic {
     margin-bottom: 80px;
+    text-shadow: 0 1px 0 $pop-color;
 }
 
 .resume-container {
@@ -26,6 +27,7 @@
 .resume-section__title {
     font-size: 100px;
     text-align: left;
+    text-shadow: 0 2px 0 $pop-color;
 }
 
 .resume-section {
@@ -34,6 +36,11 @@
 
 .resume-section__header {
     text-align: right;
+}
+
+.resume-section__header h1 {
+    text-align: right;
+    text-shadow: 0 2px 0 $pop-color;
 }
 
 .resume-section__sub-title {
@@ -46,6 +53,10 @@
     margin: 0;
 }
 
+.resume-section__education-title {
+    text-shadow: 0 .5px 0 $pop-color;
+}
+
 .resume-section__description-container {
     display: flex;
     justify-content: space-between;
@@ -56,13 +67,19 @@
     margin-top: 20px;
     font-family: $paragraph-font;
 }
-.resume-section__technologies-used {
+
+.resume-section__job-title {
+    text-shadow: 0 2px 0 $pop-color;
+}
+
+.resume-section__technologies-use {
     font-weight: 600;
 }
 
 .resume-section__description__greatest-moment {
     font-family: $header-font;
     margin-bottom: 0;
+    text-shadow: 0 2px 0 $pop-color;
 }
 
 .resume-section__description__paragraph {
@@ -104,7 +121,7 @@
         font-size: 50px;
     }
     .resume-section__header {
-        text-align: left;
+        // text-align: left;
     }
     .resume-section__header  h1 {
         margin-bottom: 0px;
@@ -126,6 +143,9 @@
     }
     .resume-section__description__greatest-moment {
         font-size: .9em;
+    }
+    .resume-section__sub-title {
+        flex-direction: column;
     }
 }
 

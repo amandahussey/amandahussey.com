@@ -24,6 +24,7 @@
 .about-container h1 {
     font-family: $dramatic-font;
     font-size: 100px;
+    text-shadow: 0 2px 0 $pop-color;
 }
 
 .about-container h3 {
@@ -56,7 +57,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-    
+
     .about-section h3 {
         font-size: 1em;
     }
@@ -90,5 +91,3 @@
         transform: translateX(0px);
     }
 }
-
-
