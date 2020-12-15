@@ -1,11 +1,12 @@
 @import '../../global-styles/colors';
 @import '../../global-styles/fonts';
+@import '../../global-styles/index';
 
 
 @media only screen and (min-width: 600px) {
     #nav-container {
         background: $primary-color;
-        height: 90px;
+        height: $nav-height--desktop;
         position: fixed;
         top: 0;
         left: 0;
@@ -17,7 +18,7 @@
 @media only screen and (max-width: 600px) {
     #nav-container {
         background: $primary-color;
-        height: 50px;
+        height: $nav-height--mobile;
         position: fixed;
         top: 0;
         left: 0;

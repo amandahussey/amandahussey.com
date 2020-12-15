@@ -19,42 +19,38 @@ class Home extends Component {
 
     componentDidMount(){
 
+        // on scroll, capture scrollY (and any resizing of window)
+        // then handle name animation based on captured scrollY
         window.addEventListener('scroll', () => {
-
-            this.setState({ 
+            this.setState({
                 scrollY: window.scrollY,
                 windowHeight: window.innerHeight
-            }, () => this.handleNav())
-
-
+            }, () => this.handleNameAnim())
         }, false);
     }
 
-    handleNav = () => {
+    handleNameAnim = () => {
 
-        const nameElmt = document.getElementById('landing__text-container__name')
-        const nameElmtScrollY = nameElmt.getBoundingClientRect().top;
-        
-
-        // determine if navIsFixed or not based on scrollY compared to windowHeight
         const { scrollY, windowHeight } = this.state
-        if(scrollY > windowHeight) this.setState({ navIsFixed: true })
-        else if(scrollY <= windowHeight) this.setState({ navIsFixed: false })
-        
+
         // set --scroll property to be percentage scrolled down
         const percentage = scrollY / windowHeight
-        if(percentage < 1) document.body.style.setProperty('--scroll', percentage)
+        if(percentage < 1) document.body.style.setProperty('--scroll', percentage) // setting to document.body.style to be accessible in css animation
+        if(percentage >= 1) document.body.style.setProperty('--scroll', .99) // ensure doesn't pop to 100%
 
-        console.log('nameElmtScrollY:', nameElmtScrollY);
-        console.log('scrollY:', scrollY);
-        console.log('windowHeight:', windowHeight);
-        console.log('percentage:', percentage);
+        // navIsFixed once animation has reached 100%
+        if(percentage >= 1) {
+          this.setState({ navIsFixed: true })
+        }
+        else {
+          this.setState({ navIsFixed: false })
+        }
     }
 
     render (){
 
         const { navIsFixed } = this.state
-   
+
         return (
             <div>
                 <Landing navIsFixed={navIsFixed} />
@@ -63,7 +59,7 @@ class Home extends Component {
                 <Resume />
                 <About />
             </div>
-            
+
         );
     }
 }

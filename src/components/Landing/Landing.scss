@@ -8,7 +8,7 @@
 
 #landing__text-container {
     min-height: 100vh;
-    overflow: auto;
+    overflow: visible;
 }
 
 #landing__text-container__name {
@@ -16,16 +16,16 @@
     text-align: center;
     text-shadow: 0 2px 0 $pop-color;
     width: 100vw;
-    
+
+    margin: 0 !important;
+
     position: fixed;
     z-index: 3;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%);
 
     animation: zoom-out-name 1s ease infinite;
     animation-play-state: paused;
-    animation-delay: calc(var(--scroll) * -1s);  
+    animation-delay: calc(var(--scroll) * -1s);
 }
 
 #landing__text-container__software-dev {
@@ -35,9 +35,7 @@
     width: 100vw;
 
     position: fixed;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%);
 
     animation: zoom-out-title 1s ease infinite;
     animation-play-state: paused;
@@ -56,15 +54,20 @@
 // Desktop
 @media only screen and (min-width: 1100px) {
 
+    // Set initial font size and position for device
     #landing__text-container__name {
         font-size: 140px;
-    }
-    
-    #landing__text-container__software-dev {
-        font-size: 30px;
+        top: 35%;
+        left: 50%;
     }
 
-    // "Amanda Hussey"
+    #landing__text-container__software-dev {
+        font-size: 30px;
+        top: 60%;
+        left: 50%;
+    }
+
+    // animate "Amanda Hussey"
     @keyframes zoom-out-name {
         0% {
             font-size: 140px;
@@ -75,7 +78,7 @@
         }
     }
 
-    // "Software Developer"
+    // animate "Software Developer"
     @keyframes zoom-out-title {
         0% {
             opacity: 1;
@@ -90,17 +93,21 @@
 // Tablet
 @media only screen and (min-width: 600px) and (max-width: 1100px) {
 
-    // Set initial font sizes for device
-    #landing__text-container__name {
-        font-size: 60px;
-    }
-    
+  // Set initial font size and position for device
+  #landing__text-container__name {
+      font-size: 60px;
+      top: 35%;
+      left: 50%;
+  }
+
     #landing__text-container__software-dev {
         font-size: 30px;
+        top: 60%;
+        left: 50%;
     }
-    
 
-    // "Amanda Hussey"
+
+    // animate "Amanda Hussey"
     @keyframes zoom-out-name {
         0% {
             font-size: 75px;
@@ -111,7 +118,7 @@
         }
     }
 
-    // "Software Developer"
+    // animate "Software Developer"
     @keyframes zoom-out-title {
         0% {
             opacity: 1;
@@ -131,28 +138,35 @@
         font-size: 30px !important;
     }
 
-    // Set initial font sizes for device
+    // Set initial font size and position for device
     #landing__text-container__name {
-        font-size: 50px;
+        font-size: 30px;
+        top: 35%;
+        left: 50%;
     }
-    
+
     #landing__text-container__software-dev {
         font-size: 20px;
+        top: 60%;
+        left: 50%;
     }
-    
 
-    // "Amanda Hussey"
+
+    // animate "Amanda Hussey"
     @keyframes zoom-out-name {
         0% {
             font-size: 50px;
         }
+        50% {
+          top: 20%;
+        }
         100% {
             font-size: 30px;
-            top: 4px;
+            top: 10px;
         }
     }
 
-    // "Software Developer"
+    // animate "Software Developer"
     @keyframes zoom-out-title {
         0% {
             opacity: 1;
@@ -162,5 +176,5 @@
             top: 10%;
         }
     }
-    
+
 }
