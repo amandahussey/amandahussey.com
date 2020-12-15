@@ -55,9 +55,10 @@ class Home extends Component {
             <div>
                 <Landing navIsFixed={navIsFixed} />
                 <Nav />
-                <About past={true}/>
+                <About type={'past'}/>
                 <Resume />
-                <About />
+                <About type={'future'}/>
+                <About type={'contact'}/>
             </div>
 
         );
