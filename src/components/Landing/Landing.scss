@@ -14,7 +14,7 @@
 #landing__text-container__name {
     font-family: $dramatic-font;
     text-align: center;
-    text-shadow: 0 2px 0 $pop-color;
+    text-shadow: 0 2px 0 $primary-color--highlight;
     width: 100vw;
     position: fixed;
     z-index: 3;
@@ -28,7 +28,7 @@
 #landing__text-container__software-dev {
     font-family: $paragraph-font;
     text-align: center;
-    text-shadow: 0 2px 0 $pop-color;
+    text-shadow: 0 1px 0 $primary-color--highlight;
     width: 100vw;
     position: fixed;
 
