@@ -16,12 +16,9 @@
     text-align: center;
     text-shadow: 0 2px 0 $pop-color;
     width: 100vw;
-
-    margin: 0 !important;
-
     position: fixed;
     z-index: 3;
-    transform: translate(-50%);
+    margin: 0 !important;
 
     animation: zoom-out-name 1s ease infinite;
     animation-play-state: paused;
@@ -33,9 +30,7 @@
     text-align: center;
     text-shadow: 0 2px 0 $pop-color;
     width: 100vw;
-
     position: fixed;
-    transform: translate(-50%);
 
     animation: zoom-out-title 1s ease infinite;
     animation-play-state: paused;
@@ -58,13 +53,11 @@
     #landing__text-container__name {
         font-size: 140px;
         top: 35%;
-        left: 50%;
     }
 
     #landing__text-container__software-dev {
         font-size: 30px;
         top: 60%;
-        left: 50%;
     }
 
     // animate "Amanda Hussey"
@@ -93,17 +86,15 @@
 // Tablet
 @media only screen and (min-width: 600px) and (max-width: 1100px) {
 
-  // Set initial font size and position for device
-  #landing__text-container__name {
-      font-size: 60px;
-      top: 35%;
-      left: 50%;
-  }
+    // Set initial font size and position for device
+    #landing__text-container__name {
+        font-size: 60px;
+        top: 35%;
+    }
 
     #landing__text-container__software-dev {
         font-size: 30px;
-        top: 60%;
-        left: 50%;
+        top: 50%;
     }
 
 
@@ -140,15 +131,13 @@
 
     // Set initial font size and position for device
     #landing__text-container__name {
-        font-size: 30px;
+        font-size: 50px;
         top: 35%;
-        left: 50%;
     }
 
     #landing__text-container__software-dev {
         font-size: 20px;
-        top: 60%;
-        left: 50%;
+        top: 50%;
     }
 
 
@@ -156,9 +145,6 @@
     @keyframes zoom-out-name {
         0% {
             font-size: 50px;
-        }
-        50% {
-          top: 20%;
         }
         100% {
             font-size: 30px;
