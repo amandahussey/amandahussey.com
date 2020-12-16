@@ -30,7 +30,7 @@ class About extends Component {
                 {type === 'future' &&
                 <div id='about--right-aligned' className='about-container'>
                     <div id='about-section--right-aligned' className='about-section'>
-                        <h1>Beyond the Web</h1>
+                        <h1>Where I'm Going</h1>
                         <h3>I'm currently dabbling in Unity/C#.</h3>
                         <h3>One project includes a pixel cat. The other, Bluetooth.</h3>
                         <h3>Stay tuned for updates or <a href='mailto: amanda.k.hussey@gmail.com'>get in touch!</a></h3>
