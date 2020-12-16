@@ -73,7 +73,6 @@ class Resume extends Component {
                             <span>[ SQL (SSMS) ]</span>
                         </p>
 
-
                         <div className='resume-section__description'>
                             <div className='resume-section__description__greatest-moment'>Greatest Accomplishment:</div>
                             <div className='resume-section__description__paragraph'>
@@ -94,6 +93,13 @@ class Resume extends Component {
                             </div>
                             <div className='resume-section__description'>
                                 <div className='resume-section__sub-title'>
+                                    <h3 className='resume-section__education-title'>Bachelor of Science in Mathematics</h3>
+                                    <h3>Aug 2010 - May 2014</h3>
+                                </div>
+                                <p>GPA: 3.8 | Magna Cum Laude</p>
+                            </div>
+                            <div className='resume-section__description'>
+                                <div className='resume-section__sub-title'>
                                     <h3 className='resume-section__education-title'>Graduate Coursework</h3>
                                     <h3>Aug 2014 - Oct 2015</h3>
                                 </div>
@@ -105,13 +111,6 @@ class Resume extends Component {
                                     <h3>Aug 2014 - Oct 2015</h3>
                                 </div>
                                 <p>Awarded Honorable Mention for Outstanding Teaching</p>
-                            </div>
-                            <div className='resume-section__description'>
-                                <div className='resume-section__sub-title'>
-                                    <h3 className='resume-section__education-title'>Bachelor of Science in Mathematics</h3>
-                                    <h3>Aug 2010 - May 2014</h3>
-                                </div>
-                                <p>GPA: 3.8 | Magna Cum Laude</p>
                             </div>
                             <div className='resume-section__description'>
                                 <div className='resume-section__sub-title'>

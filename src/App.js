@@ -7,12 +7,13 @@ import {
 
 import Home from './components/Home/Home'
 import RikuPage from './components/Riku/RikuPage'
+import D3Play from './components/D3/D3Play'
 
 class App extends Component {
   constructor(){
     super()
     this.state = {
-      
+
     }
   }
 
@@ -25,13 +26,16 @@ class App extends Component {
 					<Route path="/riku">
 						<RikuPage />
 					</Route>
+          <Route path="/d3">
+						<D3Play />
+					</Route>
 					<Route path="/">
 						<Home />
 					</Route>
 				</Switch>
 			</Router>
       </div>
-      
+
     );
   }
 }

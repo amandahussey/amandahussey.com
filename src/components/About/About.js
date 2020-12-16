@@ -15,7 +15,6 @@ class About extends Component {
     render (){
 
         const { type } = this.props
-        console.log("type", type)
 
         return (
             <div>
@@ -23,7 +22,7 @@ class About extends Component {
                 <div id='about--left-aligned' className='about-container'>
                     <div id='about-section--left-aligned' className='about-section'>
                         <h1>Where I've Been</h1>
-                        <h3>Up to this point, my focus in software has been on web development.</h3>
+                        <h3>Web development has been my focus in software up to this point.</h3>
                         <h3>Before software, there was math.</h3>
                     </div>
                 </div>}
@@ -32,9 +31,9 @@ class About extends Component {
                 <div id='about--right-aligned' className='about-container'>
                     <div id='about-section--right-aligned' className='about-section'>
                         <h1>Beyond the Web</h1>
-                        <h3>I'm currently dabbling in game and app development using Unity/C#.</h3>
+                        <h3>I'm currently dabbling in Unity/C#.</h3>
                         <h3>One project includes a pixel cat. The other, Bluetooth.</h3>
-                        <h3>Stay tuned for updates or get in touch!</h3>
+                        <h3>Stay tuned for updates or <a href='mailto: amanda.k.hussey@gmail.com'>get in touch!</a></h3>
                     </div>
                 </div>}
 
