@@ -16,18 +16,22 @@
 }
 
 #uic {
-    margin-bottom: 80px;
+    margin-top: 0;
+    margin-bottom: 60px;
     text-shadow: 0 1px 0 $pop-color;
+    // margin-left: 42px;
 }
 
 .resume-container {
-    margin: 100px auto 175px;
+    width: 80vw;
+    margin: 0px auto 120px;
 }
 
 .resume-section__title {
     font-size: 100px;
     text-align: left;
     text-shadow: 0 2px 0 $pop-color;
+    margin: 80px 0 64px 0;
 }
 
 .resume-section {
@@ -35,11 +39,11 @@
 }
 
 .resume-section__header {
-    text-align: right;
+    // text-align: right;
 }
 
 .resume-section__header h1 {
-    text-align: right;
+    // text-align: right;
     text-shadow: 0 2px 0 $pop-color;
 }
 
@@ -96,17 +100,17 @@
 
 @media only screen and (min-width: 1000px) {
     .resume-container {
-        width: 900px;
-
+        // width: 900px;
     }
 }
 
 @media only screen and (max-width: 1000px) {
     .resume-container {
-        width: 90vw;
+        // width: 90vw;
     }
     #uic {
         text-align: left;
+        // margin-left: 0;
     }
     .resume-section__title {
         font-size: 70px;
@@ -115,7 +119,7 @@
 
 @media only screen and (max-width: 600px) {
     .resume-container {
-        width: 90vw;
+        // width: 90vw;
     }
     .resume-section__title {
         font-size: 50px;
