@@ -27,7 +27,7 @@
     text-shadow: 0 2px 0 $pop-color;
 }
 
-.about-container h3 {
+.about-section h3 {
     font-family: $paragraph-font;
     font-weight: normal;
 }
@@ -64,6 +64,11 @@ a {
 
     .about-section h3 {
         font-size: 1em;
+        // text-align: left;
+    }
+
+    .resume-section {
+        margin-bottom: 60px;
     }
 
     @keyframes slide-in-1 {
@@ -76,22 +81,22 @@ a {
     }
 }
 
-@media only screen and (min-width: 600px) {
-    @keyframes slide-in-1 {
-        from {
-            transform: translateX(100vw);
-        }
-        to {
-            transform: translateX(-100vw);
-        }
-    }
-}
-
-@keyframes slide-in-2 {
-    from {
-        transform: translateX(-1000px);
-    }
-    to {
-        transform: translateX(0px);
-    }
-}
+// @media only screen and (min-width: 600px) {
+//     @keyframes slide-in-1 {
+//         from {
+//             transform: translateX(100vw);
+//         }
+//         to {
+//             transform: translateX(-100vw);
+//         }
+//     }
+// }
+//
+// @keyframes slide-in-2 {
+//     from {
+//         transform: translateX(-1000px);
+//     }
+//     to {
+//         transform: translateX(0px);
+//     }
+// }

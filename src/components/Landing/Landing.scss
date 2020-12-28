@@ -93,7 +93,7 @@
     }
 
     #landing__text-container__software-dev {
-        font-size: 30px;
+        font-size: 35px;
         top: 50%;
     }
 
@@ -163,4 +163,26 @@
         }
     }
 
+}
+
+
+// Extra small mobile (iPhone SE)
+@media only screen and (max-width: 400px) {
+
+    // Set initial font size and position for device
+    #landing__text-container__name {
+        font-size: 40px;
+        top: 35%;
+    }
+
+    // animate "Amanda Hussey"
+    @keyframes zoom-out-name {
+        0% {
+            font-size: 40px;
+        }
+        100% {
+            font-size: 30px;
+            top: 4px;
+        }
+    }
 }

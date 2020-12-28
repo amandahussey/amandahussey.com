@@ -22,7 +22,7 @@ class About extends Component {
                 <div id='about--left-aligned' className='about-container'>
                     <div id='about-section--left-aligned' className='about-section'>
                         <h1>Where I've Been</h1>
-                        <h3>Web development has been my focus in software up to this point.</h3>
+                        <h3>Web development has been my focus up to this point.</h3>
                         <h3>Before software, there was math.</h3>
                     </div>
                 </div>}
