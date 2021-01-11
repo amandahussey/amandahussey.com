@@ -44,7 +44,7 @@
 
 .resume-section__header h1 {
     // text-align: right;
-    text-shadow: 0 2px 0 $pop-color;
+    text-shadow: 0 1px 0 $pop-color;
 }
 
 .resume-section__sub-title {
@@ -58,7 +58,7 @@
 }
 
 .resume-section__education-title {
-    text-shadow: 0 1px 0 $pop-color;
+    text-shadow: 0 .5px 0 $pop-color;
 }
 
 .resume-section__description-container {
@@ -73,7 +73,7 @@
 }
 
 .resume-section__job-title {
-    text-shadow: 0 1px 0 $pop-color;
+    text-shadow: 0 .5px 0 $pop-color;
 }
 
 .resume-section__technologies-use {
@@ -83,7 +83,7 @@
 .resume-section__description__greatest-moment {
     font-family: $header-font;
     margin-bottom: 0;
-    text-shadow: 0 1px 0 $pop-color;
+    text-shadow: 0 .5px 0 $pop-color;
 }
 
 .resume-section__description__paragraph {

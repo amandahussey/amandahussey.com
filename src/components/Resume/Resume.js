@@ -21,44 +21,59 @@ class Resume extends Component {
 
                     <div className='resume-section'>
                         <div className='resume-section__header'>
-                            <h1>Zayo Group</h1>
+                            <h1>Application Developer @ Zayo Group</h1>
                         </div>
-
-                        <h3 className='resume-section__job-title'>Application Developer</h3>
                         <p className='resume-section__technologies-used'>
                             <span>[ React + Redux ] </span>
                             <span>[ AngularJS ] </span>
                             <span>[ NodeJS ]</span>
                         </p>
 
+                        <div className='resume-section__description'>
+                            <div className='resume-section__description__greatest-moment'>Greatest Contribution:</div>
+                            <div className='resume-section__description__paragraph'>
+                                <p>Worked closely with designer to develop strategies around delivering best UI/UX practices.</p>
+                                <p>Onboarded junior hire. I truly enjoyed acting as a teacher/mentor!</p>
+                            </div>
+                        </div>
+
                     </div>
 
                     <div className='resume-section'>
                         <div className='resume-section__header'>
-                            <h1>The Green Solution</h1>
+                            <h1>Front End Developer @ The Green Solution</h1>
                         </div>
 
-                        <h3 className='resume-section__job-title'>Front End Developer</h3>
+
                         <p className='resume-section__technologies-used'>
                             <span>[ React + Redux ] </span>
                             <span>[ jQuery + ES6 template literals ]</span>
                         </p>
-
+                        <div className='resume-section__description'>
+                            <div className='resume-section__description__greatest-moment'>Proudest Moment:</div>
+                            <div className='resume-section__description__paragraph'>
+                                <p>Led 10+ project scoping meetings after introducing an agile approach; received positive feedback through to executive level.</p>
+                                <p>I enjoyed being a go-between of sorts, helping bridge the gap between techincal and non-technical.</p>
+                            </div>
+                        </div>
 
                     </div>
 
                     <div className='resume-section'>
                         <div className='resume-section__header'>
-                            <h1>EVS LLC</h1>
+                            <h1>Junior Software Developer @ EVS</h1>
                         </div>
-
-                        <h3 className='resume-section__job-title'>Junior Software Developer</h3>
                         <p className='resume-section__technologies-used'>
                             <span>[ AngularJS ] </span>
                             <span>[ SQL (SSMS) ]</span>
                         </p>
-
-
+                        <div className='resume-section__description'>
+                             <div className='resume-section__description__greatest-moment'>Greatest Accomplishment:</div>
+                             <div className='resume-section__description__paragraph'>
+                                 <p>The Pack Station - A key feature of the web app. UI designed by me!</p>
+                                 <p>Executives loved it so much, they made sure it was shown in all major sales demos. It was even planned to be used in an advertising campaign.</p>
+                             </div>
+                         </div>
                     </div>
                 </div>
                 </div>
