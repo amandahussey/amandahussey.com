@@ -21,7 +21,7 @@ class Resume extends Component {
 
                     <div className='resume-section'>
                         <div className='resume-section__header'>
-                            <h1>Application Developer @ Zayo Group</h1>
+                            <h1><span>Application Developer</span> <span>@ Zayo Group</span></h1>
                         </div>
                         <p className='resume-section__technologies-used'>
                             <span>[ React + Redux ] </span>
@@ -41,7 +41,7 @@ class Resume extends Component {
 
                     <div className='resume-section'>
                         <div className='resume-section__header'>
-                            <h1>Front End Developer @ The Green Solution</h1>
+                            <h1><span>Front End Developer</span> <span>@ The Green Solution</span></h1>
                         </div>
 
 
@@ -61,7 +61,7 @@ class Resume extends Component {
 
                     <div className='resume-section'>
                         <div className='resume-section__header'>
-                            <h1>Junior Software Developer @ EVS</h1>
+                            <h1><span>Jr. Software Developer</span> <span>@ EVS</span></h1>
                         </div>
                         <p className='resume-section__technologies-used'>
                             <span>[ AngularJS ] </span>

@@ -129,7 +129,9 @@
     }
     .resume-section__header  h1 {
         margin-bottom: 0px;
-        font-size: 1.5em;
+        font-size: 1.2em;
+        display: flex;
+        flex-direction: column;
     }
     .resume-section__header  h2 {
         font-size: 1em;
