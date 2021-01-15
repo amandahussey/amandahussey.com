@@ -106,7 +106,7 @@ class Resume extends Component {
                                 <div className='resume-section__sub-title'>
                                     <h3 className='resume-section__education-title'>Undergraduate Researcher</h3>
                                 </div>
-                                <p>Ask me about the behavior of a given quadratic irrational's continued fraction expansion when multiplied by two.</p>
+                                <p>Ask me about the behavior of a given quadratic irrational's simple continued fraction expansion when multiplied by two.</p>
                             </div>
                         </div>
                     </div>
