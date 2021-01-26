@@ -88,7 +88,7 @@ class Resume extends Component {
                                 <div className='resume-section__sub-title'>
                                     <h3 className='resume-section__education-title'>Bachelor of Science in Mathematics</h3>
                                 </div>
-                                <p><b>GPA: 3.8</b> | Magna Cum Laude</p>
+                                <p><b>GPA: 3.8</b> | Minor in Spanish</p>
                             </div>
                             <div className='resume-section__description'>
                                 <div className='resume-section__sub-title'>
