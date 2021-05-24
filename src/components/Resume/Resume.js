@@ -21,10 +21,29 @@ class Resume extends Component {
 
                     <div className='resume-section'>
                         <div className='resume-section__header'>
+                            <h1 className='current'><span >CURRENTLY REMOTE: </span><i><span>Front-End Software Engineer</span> <span>@ Olive AI</span></i></h1>
+                        </div>
+                        <p className='resume-section__technologies-used'>
+                            <span>[ React + Redux ]</span>
+                            <span>[ NodeJS ]</span>
+                        </p>
+
+                        <div className='resume-section__description'>
+                            <div className='resume-section__description__greatest-moment'>I am grateful to be:</div>
+                            <div className='resume-section__description__paragraph'>
+                                <p>Working on fun, detailed animation work in my current role on the data visualization, or "Apertures", team at Olive AI.</p>
+                                <p>Working with fun, kind people at an awesome company with a welcoming culture based on inclusion, awareness, and healthy communication.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div className='resume-section'>
+                        <div className='resume-section__header'>
                             <h1><span>Application Developer</span> <span>@ Zayo Group</span></h1>
                         </div>
                         <p className='resume-section__technologies-used'>
-                            <span>[ React + Redux ] </span>
+                            <span>[ React + Redux ]</span>
                             <span>[ AngularJS ] </span>
                             <span>[ NodeJS ]</span>
                         </p>
@@ -33,7 +52,7 @@ class Resume extends Component {
                             <div className='resume-section__description__greatest-moment'>Greatest Contribution:</div>
                             <div className='resume-section__description__paragraph'>
                                 <p>Worked closely with senior designer to develop strategies around delivering best <b>UI/UX</b> practices.</p>
-                                <p><b>Onboarded</b> junior hire. I truly enjoyed acting as a teacher/mentor!</p>
+                                <p>Helped <b>onboard</b> junior hire. I truly enjoyed acting as a teacher/mentor!</p>
                             </div>
                         </div>
 

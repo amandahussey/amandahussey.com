@@ -40,6 +40,12 @@
 
 .resume-section__header {
     // text-align: right;
+    .current {
+        color: $primary-color;
+        background: $secondary-color;
+        display: inline-block;
+        padding: 14px 18px 12px 12px;
+    }
 }
 
 .resume-section__header h1 {
