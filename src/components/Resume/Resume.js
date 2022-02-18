@@ -44,7 +44,7 @@ class Resume extends Component {
                         </div>
                         <p className='resume-section__technologies-used'>
                             <span>[ React + Redux ]</span>
-                            <span>[ AngularJS ] </span>
+                            <span>[ AngularJS ]</span>
                             <span>[ NodeJS ]</span>
                         </p>
 
@@ -65,7 +65,7 @@ class Resume extends Component {
 
 
                         <p className='resume-section__technologies-used'>
-                            <span>[ React + Redux ] </span>
+                            <span>[ React + Redux ]</span>
                             <span>[ jQuery + ES6 template literals ]</span>
                         </p>
                         <div className='resume-section__description'>
@@ -83,7 +83,7 @@ class Resume extends Component {
                             <h1><span>Jr. Software Developer</span> <span>@ EVS</span></h1>
                         </div>
                         <p className='resume-section__technologies-used'>
-                            <span>[ AngularJS ] </span>
+                            <span>[ AngularJS ]</span>
                             <span>[ SQL (SSMS) ]</span>
                         </p>
                         <div className='resume-section__description'>
