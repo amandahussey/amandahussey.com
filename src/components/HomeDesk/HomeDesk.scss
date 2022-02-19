@@ -1,0 +1,227 @@
+@import '../../global-styles/colors';
+@import '../../global-styles/fonts';
+
+body {
+  background: rgb(39, 88, 60);
+}
+
+.home-desk-background-container {
+  position: relative;
+  height: 100vh;
+
+  .home-desk-the-desk {
+    background: rgb(83, 60, 60);
+    width: 100%;
+    height: 30vh;
+    position: absolute;
+    bottom: 0;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.18);
+
+    .home-desk-computer {
+      position: relative;
+
+      .home-desk-computer-perspective-container {
+        width: 360px;
+        height: 200px;
+        position: absolute;
+        bottom: 12px;
+        left: 28px;
+        -webkit-perspective: 1000px;
+        perspective: 1000px;
+      }
+      
+      .home-desk-computer-screen-frame {
+        width: 100%;
+        height: 100%;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0px 3px 15px rgba(0,0,0,0.15);
+        transform: rotateX(-2deg);
+
+        &:hover {
+          
+        }
+
+        .home-desk-computer-screen {
+          width: 100%;
+          height: 180px;
+          background: black;
+          border-radius: 10px 10px 0px 0px;
+          box-shadow: 0px 3px 15px rgba(0,0,0,0.15);
+          transform: rotateX(-2deg);
+
+          .home-desk-computer-screen-site-container {
+            width: 330px;
+            height: 150px;
+            
+            transform: rotateX(-2deg);
+            top: 15px;
+            left: 15px;
+            position: relative;
+            overflow-y: scroll;
+
+            .home-desk-computer-screen-site-content {
+              background: $primary-color;
+              transform: rotateX(-2deg);
+              position: absolute;
+              height: 300px;
+              width: 100%;
+            }
+
+            .home-desk-computer-screen-site-landing {
+              height: calc(150px + 24px);
+              width: 100%;
+            }
+
+            .home-desk-computer-screen-site-click-to-read {
+              background: white;
+              height: calc(150px - 24px);
+              width: 100%;
+              color: black;
+              position: absolute;
+              bottom: 0;
+            }
+
+            .home-desk-computer-screen-site-name {
+              font-size: 75px;
+              top: 50px;
+              position: sticky;
+              font-family: $dramatic-font;
+              text-align: center;
+              text-shadow: 0 1px 0 $pop-color;
+              width: 100%;
+              z-index: 3;
+              margin: 0 !important;
+
+              animation: zoom-out-name-mini 1s ease infinite;
+              animation-play-state: paused;
+              animation-delay: calc(var(--scroll-mini) * -1s);
+
+              &.fixed-name {
+                background: $primary-color;
+                height: 24px;
+              }
+            }
+
+            .home-desk-computer-screen-site-title {
+              font-family: $paragraph-font;
+              text-align: center;
+              text-shadow: 0 1px 0 $pop-color;
+              width: 100%;
+              position: sticky;
+              top: 90px;
+
+              animation: zoom-out-title-mini 1s ease infinite;
+              animation-play-state: paused;
+              animation-delay: calc(var(--scroll-mini) * -1s);
+              
+            }
+          }
+        }
+      }
+
+      .home-desk-computer-stand-top {
+        width: 60px;
+        height: 70px;
+        background: lightgrey;
+        // box-shadow: 0px 3px 15px rgba(0,0,0,0.15);
+        // -webkit-transform: rotateX(1deg) rotateY(9deg);
+        // transform: rotateX(50deg);
+        transform: translateX(-50%) rotateX(30deg);
+        position: absolute;
+        left: 50%;
+        top: 95%;
+      }
+
+      .home-desk-computer-stand-bottom {
+        width: 50%;
+        height: 90px;
+        background: lightgrey;
+        border-radius: 10px;
+        box-shadow: 0px 3px 15px rgba(0,0,0,0.25);
+        // -webkit-transform: rotateX(1deg) rotateY(9deg);
+        // transform: rotateX(50deg);
+        transform: translateX(-50%)rotateX(80deg);
+        position: absolute;
+        left: 50%;
+        top: calc(60% + 90px);
+      }
+    }
+
+  }
+
+  // .home-desk-window {
+  //   width: 400px;
+  //   height: 700px;
+  //   background: linear-gradient(rgb(166, 166, 226), rgb(86, 86, 231));
+  //   position: absolute;
+  //   left: 33%;
+  //   border: 6px solid white;
+  //   box-shadow: 0px 8px 8px rgba(0,0,0,0.20);
+
+  //   .home-desk-window-bottom {
+  //     width: 100%;
+  //     height: 350px;
+  //     position: absolute;
+  //     top: -6px;
+  //     left: -6px;
+  //     border: 6px solid white;
+  //   }
+
+  //   .home-desk-window-lock {
+  //     width: 10%;
+  //     height: 6px;
+  //     background: rgb(214, 214, 214);
+  //     position: absolute;
+  //     top: calc(50% - 6px);
+  //     left: 50%;
+  //     transform: translateX(-50%);
+  //     box-shadow: 0px 1px 2px rgba(0,0,0,0.20);
+  //   }
+
+  //   .home-desk-window-frame {
+  //     width: 100%;
+  //     height: 700px;
+  //     border: 6px solid white;
+  //     box-shadow: 0px 8px 8px rgba(0,0,0,0.20);
+  //     position: absolute;
+  //     top: -6px;
+  //     left: -6px;
+  //   }
+  // }
+
+
+  // Set initial font size and position for device
+  #landing__text-container__name {
+      
+  }
+
+  #landing__text-container__software-dev {
+      font-size: 35px;
+      top: 50%;
+  }
+
+
+  // animate "Amanda Hussey"
+  @keyframes zoom-out-name-mini {
+      0% {
+        font-size: 28px;
+      }
+      100% {
+        font-size: 16px;
+        top: 0px;
+      }
+  }
+
+  // animate "Software Developer"
+  @keyframes zoom-out-title-mini {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        top: 10%;
+      }
+  }
+
+}

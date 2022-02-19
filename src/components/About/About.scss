@@ -8,61 +8,66 @@
     background: $secondary-color;
     color: $primary-color;
     flex-direction: column;
+
+    &.mini {
+        min-height: 126px;
+
+        .about-section {
+            width: 80%;
+        }
+
+        h1 {
+            font-size: 18px;
+            text-shadow: 0 1px 0 $pop-color;
+        }
+
+        h3 {
+            font-size: 10px;
+        }
+    }
+
+    .about-section {
+        width: 80vw;
+        margin: auto;
+    
+        .about__where-going {
+            text-align: right;
+        }
+        
+        .coming-soon {
+            color: $pop-color;
+        }
+    
+        a {
+            color: white;
+        }
+    }
+
+    h1 {
+        font-family: $dramatic-font;
+        font-size: 100px;
+        text-shadow: 0 2px 0 $pop-color;
+    }
+
+    h3 {
+        font-family: $paragraph-font;
+        font-weight: normal;
+    }
+
+    &.about--left-aligned {
+        background: $secondary-color;
+        color: $primary-color;
+    }
+
+    &.about--right-aligned {
+        background: $primary-color;
+        color: $secondary-color;
+        text-align: right;
+    }
 }
 
-#about--left-aligned {
-    background: $secondary-color;
-    color: $primary-color;
-}
 
-#about--right-aligned {
-    background: $primary-color;
-    color: $secondary-color;
-    text-align: right;
-}
 
-.about-container h1 {
-    font-family: $dramatic-font;
-    font-size: 100px;
-    text-shadow: 0 2px 0 $pop-color;
-}
-
-.about-section h3 {
-    font-family: $paragraph-font;
-    font-weight: normal;
-}
-
-.about-section {
-    width: 80vw;
-    margin: auto;
-    // animation: slide-in-1 1s linear;
-    // animation-play-state: paused;
-    // animation-delay: calc(var(--scroll-1) * -1s);
-}
-
-.about__where-going {
-    text-align: right;
-}
-
-.about-section--left-aligned {
-    // animation: slide-in-1 1s linear;
-    // animation-play-state: paused;
-    // animation-delay: calc(var(--scroll-1) * -1s);
-}
-
-.about-section--right-aligned {
-    // animation: slide-in-2 1s linear;
-    // animation-play-state: paused;
-    // animation-delay: calc(var(--scroll-2) * -1s);
-}
-
-.coming-soon {
-    color: $pop-color;
-}
-
-a {
-    color: white;
-}
 
 @media only screen and (max-width: 600px) {
 

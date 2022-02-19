@@ -1,0 +1,277 @@
+$dark-green: rgb(13, 73, 43);
+$dark-grey: rgb(102, 102, 102);
+$lightest-green: #60b660;
+$lighter-green: #4c8f4c;
+
+body {
+  background: lightgrey;
+}
+
+.digame-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  color: black;
+  font-family: Geneva, Tahoma, sans-serif;
+  width: 100vw;
+  padding: 24px;
+
+  button {
+    background-color: $lighter-green;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .counter-container {
+    padding: 24px;
+    font-size: 100px;
+    position: relative;
+    margin: 24px 0;
+    text-align: center;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.18);
+
+    h1, h6 {
+      margin: 0;
+    }
+
+    .clear-counter-container {
+      position: absolute;
+      font-size: 24px;
+      top: 12px;
+      right: 12px;
+      cursor: pointer;
+    }
+  }
+
+  .measurement-container {
+    background: white;
+    height: 100%;
+    margin: 24px 0; 
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.18);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      margin-bottom: 0;
+    }
+  }
+
+  .counter-params-container {
+    padding: 24px;
+    position: relative;
+    margin: 24px 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.18);
+  }
+
+  .device-container {
+    flex-basis: 50%;
+
+    h1 {
+      margin-top: 0;
+    }
+
+    .device-info-container {
+      background: $dark-green;
+      border-radius: 8px;
+      color: white;
+      padding: 24px;
+
+      .device-info-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+          margin-left: 24px;
+          margin-right: 24px;
+
+          b {
+            color: black;
+          }
+
+          span {
+            color: $dark-grey;
+            font-weight: 700;
+            font-size: 14px;
+            border: 1px solid transparent;
+
+            &[contenteditable="true"] {
+              border-color: $dark-grey;
+              border-radius: 4px;
+            }
+          }
+        }
+
+        .device-info-main-details {
+          margin-left: 12px;
+          margin-right: 24px;
+
+          h1 {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.18);
+          }
+        }
+      }
+
+      .device-actions {
+        background: black;
+        margin: 24px 0;
+        padding: 24px;
+        border-radius: 6px;
+        color: white;
+        font-weight: 500;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        .save-button {
+          position: absolute;
+          bottom: 24px;
+          right: 24px;
+          width: 160px;
+
+          .fa {
+            margin-left: 8px;
+          }
+
+          .fa-spinner {
+            animation: rotate linear 2s infinite;
+          }
+        }
+
+        h4 {
+          margin-top: 0;
+        }
+
+        .device-action {
+          display: flex;
+          align-items: center;
+          width: 212px;
+          justify-content: space-between;
+          margin: 8px;
+
+          label {
+            margin-left: 16px;
+          }
+        }
+      }
+
+      .device-info-details-container {
+        margin: 0 24px;
+        background: white;
+        color: black;
+        border-radius: 8px;
+        position: relative;
+
+        .device-info-details-edit {
+          position: absolute;
+          bottom: 12px;
+          right: 12px;
+          cursor: pointer;
+
+          &:hover {
+            i {
+              color: $lighter-green !important;
+            }
+          }
+        }
+
+        .device-info-description {
+          font-style: italic;
+          color: $dark-grey;
+        }
+      }
+
+    }
+  }
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: $lightest-green;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px $lightest-green;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

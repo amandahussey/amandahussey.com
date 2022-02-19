@@ -6,8 +6,10 @@ import {
 } from "react-router-dom"
 
 import Home from './components/Home/Home'
+import HomeDesk from './components/HomeDesk/HomeDesk'
 import RikuPage from './components/Riku/RikuPage'
 import D3Play from './components/D3/D3Play'
+import Digame from './components/Digame'
 
 class App extends Component {
   constructor(){
@@ -28,6 +30,12 @@ class App extends Component {
 					</Route>
           <Route path="/d3">
 						<D3Play />
+					</Route>
+          <Route path="/home-desk">
+						<HomeDesk />
+					</Route>
+          <Route path="/digame">
+						<Digame />
 					</Route>
 					<Route path="/">
 						<Home />
