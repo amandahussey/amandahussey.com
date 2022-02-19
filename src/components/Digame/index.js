@@ -120,14 +120,16 @@ function Digame(){
         </div>
 
         <div className='counter-params-container'>
-          <h3>Counter Parameters</h3>
-          <h5>Counter #</h5>
-          <h5>Counter Population</h5>
-          <h5>Det. Thresh. (1-100%)</h5>
-          <h5>Lane 1</h5>
-          <input type="range" min="1" max="100" value="50"></input>
-          <h5>Lane 2</h5>
-          <input type="range" min="1" max="100" value="50"></input>
+          <h2>Counter Parameters</h2>
+          <div className='counter-params-param-container'>
+            <h5>Counter #</h5>
+            <h5>Counter Population</h5>
+            <h5>Det. Thresh. (1-100%)</h5>
+            <h5>Lane 1</h5>
+            <input type="range" min="1" max="100" value="50"></input>
+            <h5>Lane 2</h5>
+            <input type="range" min="1" max="100" value="50"></input>
+          </div>
         </div>
 
         <div className='device-actions'>
