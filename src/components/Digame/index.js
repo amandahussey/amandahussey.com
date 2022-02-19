@@ -1,14 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Digame.scss';
 import Ruler from './Ruler';
-
-function usePrevious(value) {
-  const ref = useRef();
-  useEffect(() => {
-    ref.current = value;
-  });
-  return ref.current;
-}
+import Card from './Card';
 
 function Digame(){
 
@@ -17,14 +10,7 @@ function Digame(){
 
   const [detailsEditable, setDetailsEditable] = useState(false);
 
-  const [saving, setSaving] = useState(false);
-  const [saved, setSaved] = useState(false);
-
   const seconds = now.getSeconds();
-
-  let saveText = 'Save';
-  if(saving) saveText = 'Saving';
-  else if(saved) saveText = 'Saved';
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -33,48 +19,38 @@ function Digame(){
     return () => clearInterval(intervalId);
   }, [])
 
-  useEffect(() => {
-    if(saved && saving) {
-      setSaving(false);
-    }
-    if(!saving && saved){
-      setTimeout(() => {
-        setSaved(false);
-      }, 1000)
-    }
-    console.log('saving', saving)
-    console.log('saved', saved)
-  }, [saving, saved])
-
   return (
     <div className='digame-container'>
 
       <div className='device-container'>
         <div className='device-info-container'>
           <div className='device-info-header'>
-
+            <h1>Digame Longmont</h1>
+            <div className='device-info-content-container'>
             <div className='device-info-main-details'>
-              <h1>Digame Longmont</h1>
-              <i 
-                className="fa-solid fa-clock"
-                style={{ color: 'white'}}
-              />
-              <p>UPTIME: 4d 3hr 24min {seconds}sec</p>
-              <button style={{ marginLeft: 24 }}>
-              <i 
-                className="fa fa-refresh refresh"
-                  onClick={() => { 
-                    if(count) setCount(0)
-                    else setCount(2070)
-                  }}></i> Reboot
-                </button>
+              <div>
+                <i 
+                  className="fa-solid fa-clock"
+                  style={{ color: 'white'}}
+                />
+                <p>UPTIME: 4d 3hr 24min {seconds}sec</p>
+                <button style={{ marginLeft: 24 }}>
+                <i 
+                  className="fa fa-refresh refresh"
+                    onClick={() => { 
+                      if(count) setCount(0)
+                      else setCount(2070)
+                    }}></i> Reboot
+                  </button>
+              </div>
+              
             </div>
 
             <div className='device-info-details-container'>
               <p><b>Model:</b> <span contentEditable={detailsEditable}>DS-VC-LIDAR-WIFI-1</span><span className='device-info-description' contentEditable={detailsEditable}>(LoRa-WiFi Base Station)</span></p>
               <p><b>Software Version:</b> <span contentEditable={detailsEditable} style={{ marginLeft: 18 }}> <span>0.9.70</span></span></p>
               <p><b>File System Version:</b> <span contentEditable={detailsEditable}>0.9.70</span></p>
-              <div 
+              {/* <div 
                 className='device-info-details-edit'
                 onClick={() => {
                   setDetailsEditable(prev => !prev);
@@ -88,9 +64,11 @@ function Digame(){
                   className="fa fa-check"
                   style={{ color: 'black'}}
                 />}
-                </div>
+                </div> */}
             </div>
 
+            </div>
+            
           </div>
 
           
@@ -119,41 +97,25 @@ function Digame(){
           <h1>999cm</h1>
         </div>
 
-        <div className='counter-params-container'>
-          <h2>Counter Parameters</h2>
-          <div className='counter-params-param-container'>
-            <h5>Counter #</h5>
-            <h5>Counter Population</h5>
-            <h5>Det. Thresh. (1-100%)</h5>
-            <h5>Lane 1</h5>
-            <input type="range" min="1" max="100" value="50"></input>
-            <h5>Lane 2</h5>
-            <input type="range" min="1" max="100" value="50"></input>
-          </div>
-        </div>
+        <Card
+          header='Counter Parameters'
+          contents={(
+            <>
+              <h5>Counter #</h5>
+              <h5>Counter Population</h5>
+              <h5>Det. Thresh. (1-100%)</h5>
+              <h5>Lane 1</h5>
+              <input type="range" min="1" max="100" value="50"></input>
+              <h5>Lane 2</h5>
+              <input type="range" min="1" max="100" value="50"></input>
+            </>
+          )}
+        />
 
-        <div className='device-actions'>
-            <button 
-              className='save-button'
-              onClick={() => {
-                console.log('here')
-                setSaving(true);
-                setTimeout(() => {
-                  setSaving(false);
-                  setSaved(true);
-                }, 1000)
-              }}
-            >
-              {saveText}
-              {saved && <i 
-                className="fa fa-check"
-                style={{ color: 'white'}}
-              />}
-              {saving && <i 
-                className="fa fa-spinner"
-                style={{ color: 'white'}}
-              />}
-              </button>
+        <Card
+          header='Logging and Streaming'
+          contents={(
+            <div className='device-actions'>
             <div>
               <h4>Logging to SD Card:</h4>
               <div className='device-action'>
@@ -183,7 +145,7 @@ function Digame(){
             </div>
 
             <div>
-              <h4>Other:</h4>
+              <h4>Streaming:</h4>
               <div className='device-action'>
                 USB Streaming
                 <label className="switch">
@@ -195,6 +157,10 @@ function Digame(){
            
           </div>
         
+          )}
+        />
+
+       
       </div>
     </div>
   )

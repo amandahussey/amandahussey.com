@@ -17,7 +17,6 @@ body {
   color: black;
   font-family: Geneva, Tahoma, sans-serif;
   width: 100vw;
-  padding: 24px;
 
   button {
     background-color: $lighter-green;
@@ -38,7 +37,8 @@ body {
     padding: 24px;
     font-size: 100px;
     position: relative;
-    margin: 24px 0;
+    margin-top: 24px;
+    margin-bottom: 24px;
     text-align: center;
     background: white;
     border-radius: 8px;
@@ -104,6 +104,7 @@ body {
   }
 
   .device-container {
+    padding: 12px;
 
     h1 {
       margin-top: 0;
@@ -117,8 +118,7 @@ body {
 
       .device-info-header {
         display: flex;
-        align-items: center;
-        justify-content: center;
+        flex-direction: column;
 
         p {
           margin-left: 24px;
@@ -141,70 +141,56 @@ body {
           }
         }
 
-        .device-info-main-details {
-          margin-left: 12px;
-          margin-right: 24px;
+        .device-info-content-container {
 
-          h1 {
-            text-shadow: 0 2px 4px rgba(0,0,0,0.18);
+          display: flex;
+          justify-content: center;
+
+          .device-info-main-details {
+            margin-left: 12px;
+            margin-right: 24px;
+  
+            h1 {
+              text-shadow: 0 2px 4px rgba(0,0,0,0.18);
+            }
           }
-        }
-      }
 
-      .device-info-details-container {
-        margin: 0 24px;
-        background: white;
-        color: black;
-        border-radius: 8px;
-        position: relative;
-
-        .device-info-details-edit {
-          position: absolute;
-          bottom: 12px;
-          right: 12px;
-          cursor: pointer;
-
-          &:hover {
-            i {
-              color: $lighter-green !important;
+          .device-info-details-container {
+            margin-left: 24px;
+            margin-right: 24px;
+            background: white;
+            color: black;
+            border-radius: 8px;
+            position: relative;
+            bottom: 36px;
+    
+            .device-info-details-edit {
+              position: absolute;
+              bottom: 12px;
+              right: 12px;
+              cursor: pointer;
+    
+              &:hover {
+                i {
+                  color: $lighter-green !important;
+                }
+              }
+            }
+    
+            .device-info-description {
+              font-style: italic;
+              color: $dark-grey;
             }
           }
         }
-
-        .device-info-description {
-          font-style: italic;
-          color: $dark-grey;
-        }
       }
-
     }
   }
 
   .device-actions {
-    background: black;
-    margin: 24px 0;
-    padding: 24px;
-    border-radius: 6px;
-    color: white;
-    font-weight: 500;
     display: flex;
     justify-content: space-between;
     position: relative;
-
-    .save-button {
-      position: absolute;
-      bottom: 24px;
-      right: 24px;
-      width: 160px;
-
-      .fa {
-        margin-left: 8px;
-      }
-
-      .fa-spinner {
-        animation: rotate linear 2s infinite;
-      }
-    }
 
     h4 {
       margin-top: 0;
@@ -296,8 +282,53 @@ input:checked + .slider:before {
   }
 }
 
-@media screen and (max-width: 600px) {
-  body {
-    background: green;
+@media screen and (max-width: 900px) {
+
+  .device-container {
+    h1 {
+      margin-bottom: 0;
+    }
+
+    .device-info-content-container {
+      flex-direction: column-reverse;
+  
+      .device-info-main-details {
+        p {
+          margin-top: 0;
+        }
+      }
+  
+      .device-info-details-container {
+        margin: 24px;
+        bottom: 0 !important;
+      }
+    }
+  }
+
+  .device-actions {
+    flex-direction: column;
+
+    > div {
+      margin-bottom: 64px;
+    }
+
+    > div:first-child {
+      margin-bottom: 24px;
+    }
+  }
+
+  .counter-container {
+    h1 {
+      font-size: 60px;
+    }
+    h6 {
+      font-size: 24px;
+    }
+  }
+
+  .counter-params-container {
+    input {
+      margin-bottom: 64px;
+    }
   }
 }

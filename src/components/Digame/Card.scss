@@ -1,0 +1,49 @@
+$dark-green: rgb(13, 73, 43);
+$darker-green: rgb(8, 43, 25);
+$dark-grey: rgb(102, 102, 102);
+$lightest-green: #60b660;
+$lighter-green: #4c8f4c;
+
+.digame-card {
+  margin: 24px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.18);
+  background: $dark-green;
+  color: white;
+
+  h2 {
+    padding: 24px;
+    margin-bottom: 0;
+  }
+
+  h5 {
+    margin-top: 0;
+  }
+
+  input {
+    margin-bottom: 28px;
+    margin-left: 12px;
+  }
+
+  .digame-card-contents-container {
+    background: black;
+    padding: 24px;
+    border-radius: 0 0 8px 8px;
+    position: relative;
+
+    .digame-save-button {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      width: 160px;
+  
+      .fa {
+        margin-left: 8px;
+      }
+  
+      .fa-spinner {
+        animation: rotate linear 2s infinite;
+      }
+    }
+  }
+}
