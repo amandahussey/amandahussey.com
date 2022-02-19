@@ -93,7 +93,44 @@ function Digame(){
 
           </div>
 
-          <div className='device-actions'>
+          
+
+        </div>
+
+        <div className='counter-container'>
+          <h1>{count}</h1>
+          <h6><i 
+              className="fa fa-car"
+              style={{ color: 'darkgreen'}}
+              ></i> vehicles</h6>
+            <div className='clear-counter-container'>
+              <i 
+                className="fa fa-ban refresh"
+                onClick={() => { 
+                  if(count) setCount(0)
+                  else setCount(2070)
+                }}></i>
+            </div>
+        </div>
+
+        <div className='measurement-container'>
+          <h1>Measured Distance</h1>
+          <Ruler />
+          <h1>999cm</h1>
+        </div>
+
+        <div className='counter-params-container'>
+          <h3>Counter Parameters</h3>
+          <h5>Counter #</h5>
+          <h5>Counter Population</h5>
+          <h5>Det. Thresh. (1-100%)</h5>
+          <h5>Lane 1</h5>
+          <input type="range" min="1" max="100" value="50"></input>
+          <h5>Lane 2</h5>
+          <input type="range" min="1" max="100" value="50"></input>
+        </div>
+
+        <div className='device-actions'>
             <button 
               className='save-button'
               onClick={() => {
@@ -155,41 +192,6 @@ function Digame(){
             </div>
            
           </div>
-
-        </div>
-
-        <div className='counter-container'>
-          <h1>{count}</h1>
-          <h6><i 
-              className="fa fa-car"
-              style={{ color: 'darkgreen'}}
-              ></i> vehicles</h6>
-            <div className='clear-counter-container'>
-              <i 
-                className="fa fa-ban refresh"
-                onClick={() => { 
-                  if(count) setCount(0)
-                  else setCount(2070)
-                }}></i>
-            </div>
-        </div>
-
-        <div className='measurement-container'>
-          <h1>Measured Distance</h1>
-          <Ruler />
-          <h1>999cm</h1>
-        </div>
-
-        <div className='counter-params-container'>
-          <h3>Counter Parameters</h3>
-          <h5>Counter #</h5>
-          <h5>Counter Population</h5>
-          <h5>Det. Thresh. (1-100%)</h5>
-          <h5>Lane 1</h5>
-          <input type="range" min="1" max="100" value="50"></input>
-          <h5>Lane 2</h5>
-          <input type="range" min="1" max="100" value="50"></input>
-        </div>
         
       </div>
     </div>

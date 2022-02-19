@@ -23,7 +23,7 @@ body {
     border: none;
     border-radius: 6px;
     color: white;
-    padding: 15px 32px;
+    padding: 8px 14px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -80,6 +80,10 @@ body {
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.18);
+
+    h3 {
+      margin-top: 0;
+    }
   }
 
   .device-container {
@@ -131,49 +135,6 @@ body {
         }
       }
 
-      .device-actions {
-        background: black;
-        margin: 24px 0;
-        padding: 24px;
-        border-radius: 6px;
-        color: white;
-        font-weight: 500;
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-
-        .save-button {
-          position: absolute;
-          bottom: 24px;
-          right: 24px;
-          width: 160px;
-
-          .fa {
-            margin-left: 8px;
-          }
-
-          .fa-spinner {
-            animation: rotate linear 2s infinite;
-          }
-        }
-
-        h4 {
-          margin-top: 0;
-        }
-
-        .device-action {
-          display: flex;
-          align-items: center;
-          width: 212px;
-          justify-content: space-between;
-          margin: 8px;
-
-          label {
-            margin-left: 16px;
-          }
-        }
-      }
-
       .device-info-details-container {
         margin: 0 24px;
         background: white;
@@ -200,6 +161,49 @@ body {
         }
       }
 
+    }
+  }
+
+  .device-actions {
+    background: black;
+    margin: 24px 0;
+    padding: 24px;
+    border-radius: 6px;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    .save-button {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      width: 160px;
+
+      .fa {
+        margin-left: 8px;
+      }
+
+      .fa-spinner {
+        animation: rotate linear 2s infinite;
+      }
+    }
+
+    h4 {
+      margin-top: 0;
+    }
+
+    .device-action {
+      display: flex;
+      align-items: center;
+      width: 212px;
+      justify-content: space-between;
+      margin: 8px;
+
+      label {
+        margin-left: 16px;
+      }
     }
   }
 }
