@@ -19,9 +19,9 @@ function About ({ mini, type }) {
             <div className={`about-container about--right-aligned ${mini ? 'mini' : ''}`}>
                 <div className={'about-section about-section--right-aligned'}>
                     <h1>Where I'm Going</h1>
-                    <h3>I plan to keep experimenting with different animations.</h3>
-                    <h3 className='coming-soon'><i>Coming soon: V2 of the site.</i> 👀</h3>
-                    <h3>Until then, feel free to <a href='mailto: amanda.k.hussey@gmail.com'>get in touch!</a></h3>
+                    <h3>I am currently working on a mini version of the site.</h3>
+                    <h3>Check out the WIP: <i><a href='/home-desk'>virtual home office experience</a></i></h3>
+                    <h3>Curious? Feel free to <a href='mailto: amanda.k.hussey@gmail.com'>get in touch!</a></h3>
                 </div>
             </div>}
 

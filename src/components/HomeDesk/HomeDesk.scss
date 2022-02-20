@@ -1,13 +1,10 @@
 @import '../../global-styles/colors';
 @import '../../global-styles/fonts';
 
-body {
-  background: rgb(39, 88, 60);
-}
-
 .home-desk-background-container {
   position: relative;
   height: 100vh;
+  background: rgb(230, 225, 210);
 
   .home-desk-the-desk {
     background: rgb(83, 60, 60);
@@ -59,9 +56,9 @@ body {
             left: 15px;
             position: relative;
             overflow-y: scroll;
+            background: $primary-color;
 
             .home-desk-computer-screen-site-content {
-              background: $primary-color;
               transform: rotateX(-2deg);
               position: absolute;
               height: 300px;
