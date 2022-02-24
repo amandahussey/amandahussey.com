@@ -13,8 +13,11 @@ function HomeDesk(){
 
     // set --scroll property to be percentage scrolled down
     const percentage = scrollTop / windowHeight
-    if(percentage < 1) document.body.style.setProperty('--scroll-mini', percentage) // setting to document.body.style to be accessible in css animation
-    if(percentage >= 1) document.body.style.setProperty('--scroll-mini', .99) // ensure doesn't pop to 100%
+    if(percentage < 0) document.body.style.setProperty('--scroll-mini', 0)
+    else if(percentage > 0 && percentage < 1) document.body.style.setProperty('--scroll-mini', percentage) 
+    else if(percentage >= 1) document.body.style.setProperty('--scroll-mini', .99) // ensure doesn't pop to 100%
+
+    console.log('percentage', percentage)
 
     // navIsFixed once animation has reached 100%
     if(percentage >= 1) {
