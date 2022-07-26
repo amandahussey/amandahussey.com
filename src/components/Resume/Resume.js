@@ -31,7 +31,7 @@ class Resume extends Component {
                         paragraphs={[
                             'I began speaking up more often, which now I consider one of my greatest strengths.', 
                             'I began reaching out to pair with more junior engineers, enjoying mentorship, and learning from them, as well.',
-                            'I began learning how/when to ask for help more senior engineers, learning how/when to lean on my team for support.', 
+                            'I began learning how/when to ask for help from more senior engineers, learning how/when to lean on my team for support.', 
                             'Another one of the best teams ever.'
                         ]}
                     />
