@@ -24,7 +24,7 @@ function HomeDesk(){
     else {
       setNavIsFixed(false);
     }
-}
+  }
 
   useEffect(() => {
     if(siteContainerRef.current) siteContainerRef.current.addEventListener('scroll', (element) => {

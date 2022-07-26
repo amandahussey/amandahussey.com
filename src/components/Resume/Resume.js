@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import ResumeSection from './ResumeSection';
+
 import './Resume.scss'
 
 class Resume extends Component {
@@ -18,25 +20,32 @@ class Resume extends Component {
                 <div id='software-development' className='resume-parent-container'>
                 <div className='resume-container'>
                     <h1 className='resume-section__title'>Web Development</h1>
+                    <h1 className='open-to-work'>CURRENTLY OPEN TO WORK</h1>
+                    <h1 className='open-to-work'>#olive450 &#127826;</h1>
 
-                    <div className='resume-section'>
-                        <div className='resume-section__header'>
-                            <h1 className='current'><span >CURRENTLY REMOTE: </span><i><span>Front-End Software Engineer</span> <span>@ Olive AI</span></i></h1>
-                        </div>
-                        <p className='resume-section__technologies-used'>
-                            <span>[ React + Redux ]</span>
-                            <span>[ NodeJS ]</span>
-                        </p>
+                    <ResumeSection 
+                        title='Software Engineer II'
+                        company='Olive AI'
+                        technologies={['React', 'Next.js']}
+                        introPhrase='I was proud to be promoted after 6 months at Olive:'
+                        paragraphs={[
+                            'I began speaking up more often, which now I consider one of my greatest strengths.', 
+                            'I began reaching out to pair with more junior engineers, enjoying mentorship, and learning from them, as well.',
+                            'I began learning how/when to ask for help more senior engineers, learning how/when to lean on my team for support.', 
+                            'Another one of the best teams ever.'
+                        ]}
+                    />
 
-                        <div className='resume-section__description'>
-                            <div className='resume-section__description__greatest-moment'>I am grateful to be:</div>
-                            <div className='resume-section__description__paragraph'>
-                                <p>Working on fun, detailed animation work in my current role on the data visualization, or "Apertures", team at Olive AI.</p>
-                                <p>Working with fun, kind people at an awesome company with a welcoming culture based on inclusion, awareness, and healthy communication.</p>
-                            </div>
-                        </div>
-
-                    </div>
+                    <ResumeSection 
+                        title='Front-End Software Engineer'
+                        company='Olive AI'
+                        technologies={['React']}
+                        introPhrase='I had such fun on the Apertures team:'
+                        paragraphs={[
+                            'Worked on fun, detailed animation work.', 
+                            'One of the best teams ever.'
+                        ]}
+                    />      
 
                     <div className='resume-section'>
                         <div className='resume-section__header'>
@@ -57,6 +66,7 @@ class Resume extends Component {
                         </div>
 
                     </div>
+
 
                     <div className='resume-section'>
                         <div className='resume-section__header'>
