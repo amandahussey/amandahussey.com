@@ -12,15 +12,15 @@ const ResumeSection = ({
       <div className='resume-section__header'>
           <h1><span>{title}</span> <span>@ {company}</span></h1>
       </div>
-      <p className='resume-section__technologies-used'>
+      {technologies && <p className='resume-section__technologies-used'>
           {technologies.map(tech => <span>[ {tech} ]</span>)}
-      </p>
+      </p>}
 
       <div className='resume-section__description'>
           <div className='resume-section__description__greatest-moment'>{introPhrase}</div>
-          <div className='resume-section__description__paragraph'>
+          {paragraphs && <div className='resume-section__description__paragraph'>
               {paragraphs.map(paragraphText => <p>{paragraphText}</p>)}
-          </div>
+          </div>}
       </div>
   </div>
   )
