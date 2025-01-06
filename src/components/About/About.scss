@@ -1,93 +1,89 @@
-@import '../../global-styles/colors';
-@import '../../global-styles/fonts';
+@import "../../global-styles/colors";
+@import "../../global-styles/fonts";
 
 .about-container {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    background: $secondary-color;
-    color: $primary-color;
-    flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: $secondary-color;
+  color: $primary-color;
+  flex-direction: column;
 
-    &.mini {
-        min-height: 126px;
-
-        .about-section {
-            width: 80%;
-        }
-
-        h1 {
-            font-size: 18px;
-            text-shadow: 0 1px 0 $pop-color;
-        }
-
-        h3 {
-            font-size: 10px;
-        }
-    }
+  &.mini {
+    min-height: 126px;
 
     .about-section {
-        width: 80vw;
-        margin: auto;
-    
-        .about__where-going {
-            text-align: right;
-        }
-        
-        .coming-soon {
-            color: $pop-color;
-        }
-    
-        a {
-            color: white;
-        }
+      width: 80%;
     }
 
     h1 {
-        font-family: $dramatic-font;
-        font-size: 100px;
-        text-shadow: 0 2px 0 $pop-color;
+      font-size: 18px;
+      text-shadow: 0 1px 0 $pop-color;
     }
 
     h3 {
-        font-family: $paragraph-font;
-        font-weight: normal;
+      font-size: 10px;
+    }
+  }
+
+  .about-section {
+    width: 80vw;
+    margin: auto;
+
+    .about__where-going {
+      text-align: right;
     }
 
-    &.about--left-aligned {
-        background: $secondary-color;
-        color: $primary-color;
+    .coming-soon {
+      color: $pop-color;
     }
 
-    &.about--right-aligned {
-        background: $primary-color;
-        color: $secondary-color;
-        text-align: right;
+    a {
+      color: white;
     }
+  }
+
+  h1 {
+    font-family: $dramatic-font;
+    font-size: 100px;
+    text-shadow: 0 2px 0 $pop-color;
+  }
+
+  h3 {
+    font-family: $paragraph-font;
+    font-weight: normal;
+  }
+
+  &.about--left-aligned {
+    background: $secondary-color;
+    color: $primary-color;
+  }
+
+  &.about--right-aligned {
+    background: $primary-color;
+    color: $secondary-color;
+    text-align: right;
+  }
 }
 
-
-
-
 @media only screen and (max-width: 600px) {
+  .about-section h3 {
+    font-size: 1em;
+    // text-align: left;
+  }
 
-    .about-section h3 {
-        font-size: 1em;
-        // text-align: left;
-    }
+  .resume-section {
+    margin-bottom: 60px;
+  }
 
-    .resume-section {
-        margin-bottom: 60px;
+  @keyframes slide-in-1 {
+    from {
+      transform: translateX(100px);
     }
-
-    @keyframes slide-in-1 {
-        from {
-            transform: translateX(100px);
-        }
-        to {
-            transform: translateX(-100px);
-        }
+    to {
+      transform: translateX(-100px);
     }
+  }
 }
 
 // @media only screen and (min-width: 600px) {

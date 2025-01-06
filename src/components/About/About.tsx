@@ -31,17 +31,28 @@ const About = ({
         >
           <div className={"about-section about-section--right-aligned"}>
             <h1>Where I'm Going</h1>
-            <h3>I am currently working on a mini version of the site.</h3>
             <h3>
-              Check out the WIP:{" "}
-              <i>
-                <a href="/home-desk">virtual home office experience</a>
-              </i>
+              I'm taking a leap of faith to start some creative endeavors of my
+              own, starting with a children's book!
             </h3>
             <h3>
-              Curious? Feel free to{" "}
-              <a href="mailto: amanda.k.hussey@gmail.com">get in touch!</a>
+              All future creations will be hosted at{" "}
+              <a href="https://www.bluerose-studios.com">
+                bluerose-studios.com
+              </a>
             </h3>
+            {!mini && (
+              <>
+                <h3 style={{ marginTop: 48 }}>
+                  For fun, I created a{" "}
+                  <a href="/home-desk">mini version of amandahussey.com</a>.
+                </h3>
+                <h3>
+                  Curious? Feel free to{" "}
+                  <a href="mailto: amanda.k.hussey@gmail.com">get in touch!</a>
+                </h3>
+              </>
+            )}
           </div>
         </div>
       )}
