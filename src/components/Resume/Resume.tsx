@@ -23,7 +23,7 @@ const Resume = () => {
           />
 
           <ResumeSection
-            title="Front-End Software Engineer &rarr; Software Engineer II"
+            title="Front End Software Engineer &rarr; Software Engineer II"
             company="Olive AI"
             introSnippets={[
               "Surrounded by an incredible team, I was proud to be promoted after 6 months at Olive. I had such fun on the Apertures team working on fun, detailed animation work.",
