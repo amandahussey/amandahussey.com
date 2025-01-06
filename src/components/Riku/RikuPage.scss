@@ -1,51 +1,49 @@
 #riku-container {
-    font-family: 'Josefin Sans';
-    color: antiquewhite;
+  font-family: "Josefin Sans";
+  color: antiquewhite;
 }
 
 #this-is-riku {
-
-    background-image: url('riku-forward.jpg');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: fixed;
-    width: 100vw;
-    font-size: 80px;
-    height: 100%;
+  background-image: url("riku-forward.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  width: 100vw;
+  font-size: 80px;
+  height: 100%;
 }
 
 #this-is-riku--this {
-    font-size: 100px;
-    position: absolute;
-    top: 150px;
-    left: 80px;
+  font-size: 100px;
+  position: absolute;
+  top: 150px;
+  left: 80px;
 }
 
 #this-is-riku--is {
-    font-size: 80px;
-    position: absolute;
-    top: 150px;
-    left: 80px;
+  font-size: 80px;
+  position: absolute;
+  top: 150px;
+  left: 80px;
 }
 
 #this-is-riku--riku {
-    font-size: 120px;
-    position: absolute;
-    bottom: 50px;
-    right: 50px;
-
+  font-size: 120px;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
 }
 
 #chris-credit {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    font-size: 16px;
-    padding: 24px 24px 8px 24px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-size: 16px;
+  padding: 24px 24px 8px 24px;
 }
 
 #chris-credit a {
-    color: antiquewhite;
+  color: antiquewhite;
 }
