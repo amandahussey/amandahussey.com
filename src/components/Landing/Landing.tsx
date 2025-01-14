@@ -14,7 +14,7 @@ const Landing = ({ navIsFixed }: { navIsFixed: boolean }) => {
           id="landing__text-container__software-dev"
           className={navIsFixed ? "hide-title" : ""}
         >
-          Software Developer
+          Software Engineer
         </h2>
       </div>
     </div>

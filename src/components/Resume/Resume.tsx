@@ -27,13 +27,19 @@ const TimelineSection = ({
   line3,
 }: {
   line1: string;
-  line2?: string;
+  line2?: string | string[];
   line3?: string;
 }) => {
   return (
     <Stack>
-      <Typography variant="body1">{line1}</Typography>
-      {line2 && <Typography variant="subtitle2">{line2}</Typography>}
+      <Typography>{line1}</Typography>
+      {line2 ? (
+        Array.isArray(line2) ? (
+          line2.map((l) => <Typography variant="subtitle2">{l}</Typography>)
+        ) : (
+          <Typography variant="subtitle2">{line2}</Typography>
+        )
+      ) : null}
       {line3 && (
         <Typography variant="caption" letterSpacing={0.8}>
           {line3}
@@ -108,7 +114,7 @@ const Resume = () => {
               <AccordionSummary>
                 <TimelineSection
                   line1="Percipio Health"
-                  line2="Software Engineer II &rarr; Senior Software Engineer"
+                  line2={["Senior Software Engineer", "Software Engineer II"]}
                   line3="React | React Native | TypeScript"
                 />
               </AccordionSummary>
@@ -143,8 +149,10 @@ const Resume = () => {
               <AccordionSummary>
                 <TimelineSection
                   line1="Olive"
-                  line2="Front-End Software Engineer &rarr; Software
-                      Engineer II"
+                  line2={[
+                    "Software Engineer II",
+                    "Front-End Software Engineer",
+                  ]}
                   line3="React | TypeScript"
                 />
               </AccordionSummary>
