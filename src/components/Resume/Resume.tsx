@@ -1,77 +1,12 @@
-import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
-  Box,
-  Stack,
-  Typography,
-  useMediaQuery,
-} from "@mui/material";
-import {
-  TimelineConnector,
-  TimelineContent,
-  TimelineDot,
-  TimelineItem,
-  timelineItemClasses,
-  TimelineOppositeContent,
-  TimelineSeparator,
-} from "@mui/lab";
+import { Box, Stack, Typography, useMediaQuery } from "@mui/material";
 import Timeline from "./Timeline";
 
 const CIRCLE_SIZE = 100;
+const CIRCLE_COLOR = "rgb(57 9 9 / 57%)";
 const SECTION_SIZE = 330;
-
-const TimelineSection = ({
-  line1,
-  line2,
-  line3,
-}: {
-  line1: string;
-  line2?: string | string[];
-  line3?: string;
-}) => {
-  return (
-    <Stack>
-      <Typography>{line1}</Typography>
-      {line2 ? (
-        Array.isArray(line2) ? (
-          line2.map((l) => <Typography variant="subtitle2">{l}</Typography>)
-        ) : (
-          <Typography variant="subtitle2">{line2}</Typography>
-        )
-      ) : null}
-      {line3 && (
-        <Typography variant="caption" letterSpacing={0.8}>
-          {line3}
-        </Typography>
-      )}
-    </Stack>
-  );
-};
 
 const Resume = () => {
   const isMobile = useMediaQuery("(max-width:600px)");
-
-  // left align timeline when isMobile (also removing opposite content when isMobile)
-  const timelineSx = isMobile
-    ? {
-        [`& .${timelineItemClasses.root}:before`]: {
-          flex: 0,
-          padding: 0,
-        },
-      }
-    : undefined;
-
-  const accordionSx = {
-    backgroundColor: "transparent",
-    "&:before": {
-      display: "none",
-    },
-    ".MuiAccordionSummary-content": {
-      margin: 0,
-      marginBottom: 1,
-    },
-  };
 
   return (
     <Stack>
@@ -82,7 +17,7 @@ const Resume = () => {
               width: CIRCLE_SIZE,
               height: CIRCLE_SIZE,
               borderRadius: "50%",
-              backgroundColor: "rgb(57 9 9 / 57%)",
+              backgroundColor: CIRCLE_COLOR,
               position: "absolute",
               zIndex: 0,
               top: -24,
@@ -167,7 +102,7 @@ const Resume = () => {
                   width: CIRCLE_SIZE * 0.8,
                   height: CIRCLE_SIZE * 0.8,
                   borderRadius: "50%",
-                  backgroundColor: "rgb(57 9 9 / 57%)",
+                  backgroundColor: CIRCLE_COLOR,
                   position: "absolute",
                   zIndex: 0,
                   top: -18,
