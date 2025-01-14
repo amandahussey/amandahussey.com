@@ -173,12 +173,12 @@ const Resume = () => {
               alt="At the UIC research forum, sharing my findings"
               style={{
                 borderRadius: "10%",
-                height: 150,
-                width: 150,
-                position: isMobile || isMedium ? "relative" : "absolute",
-                left: isMobile ? "50%" : isMedium ? "60%" : "76%",
-                bottom: isMobile || isMedium ? undefined : -60,
-                top: isMobile ? -36 : undefined,
+                height: isMobile ? 250 : 150,
+                width: isMobile ? 250 : 150,
+                alignSelf: isMobile ? "center" : undefined,
+                position: "relative",
+                left: isMobile ? undefined : "70%",
+                top: isMobile ? undefined : -24,
               }}
             />
           </Stack>
