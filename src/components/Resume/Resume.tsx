@@ -24,8 +24,8 @@ const Resume = () => {
               backgroundColor: CIRCLE_COLOR,
               position: "absolute",
               zIndex: 0,
-              top: -24,
-              left: 112,
+              top: -12,
+              left: 138,
             }}
           />
           <Typography zIndex={1} position="relative" textAlign="center">
