@@ -1,5 +1,6 @@
 import { Box, Stack, Typography, useMediaQuery } from "@mui/material";
 import Timeline from "./Timeline";
+import researchForum from "../../assets/research-forum.jpg";
 
 const CIRCLE_SIZE = 100;
 const CIRCLE_COLOR = "rgb(57 9 9 / 57%)";
@@ -7,6 +8,9 @@ const SECTION_SIZE = 330;
 
 const Resume = () => {
   const isMobile = useMediaQuery("(max-width:600px)");
+  const isMedium = useMediaQuery("(max-width:1000px) and (min-width:601px)");
+
+  console.log("isMedium", isMedium);
 
   return (
     <Stack>
@@ -95,8 +99,14 @@ const Resume = () => {
 
       <Stack mt={10}>
         <Stack spacing={6} alignSelf="center">
-          <Stack mb={10} alignSelf="center">
-            <Box maxWidth={SECTION_SIZE} position="relative">
+          <Stack
+            mb={10}
+            alignSelf={isMobile ? "flex-start" : "center"}
+            position="relative"
+            right={isMobile ? undefined : 100}
+            pl={isMobile ? 7 : undefined}
+          >
+            <Box maxWidth={SECTION_SIZE}>
               <Box
                 style={{
                   width: CIRCLE_SIZE * 0.8,
@@ -104,18 +114,18 @@ const Resume = () => {
                   borderRadius: "50%",
                   backgroundColor: CIRCLE_COLOR,
                   position: "absolute",
-                  zIndex: 0,
-                  top: -18,
-                  right: -32,
+                  zIndex: -1,
+                  top: -25,
+                  right: -37,
                 }}
               />
-              <Typography zIndex={1} position="relative" textAlign="center">
+              <Typography zIndex={1} textAlign="center">
                 Before software, there was math.
               </Typography>
             </Box>
           </Stack>
 
-          <Stack spacing={3}>
+          <Stack spacing={3} position="relative">
             <Typography
               textAlign={isMobile ? "left" : "center"}
               variant="h6"
@@ -156,6 +166,20 @@ const Resume = () => {
                   ],
                 },
               ]}
+            />
+
+            <img
+              src={researchForum}
+              alt="At the UIC research forum, sharing my findings"
+              style={{
+                borderRadius: "10%",
+                height: 150,
+                width: 150,
+                position: isMobile || isMedium ? "relative" : "absolute",
+                left: isMobile ? "50%" : isMedium ? "60%" : "76%",
+                bottom: isMobile || isMedium ? undefined : -60,
+                top: isMobile ? -36 : undefined,
+              }}
             />
           </Stack>
         </Stack>
