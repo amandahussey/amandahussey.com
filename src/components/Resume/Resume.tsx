@@ -8,7 +8,6 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import {
-  Timeline,
   TimelineConnector,
   TimelineContent,
   TimelineDot,
@@ -17,6 +16,7 @@ import {
   TimelineOppositeContent,
   TimelineSeparator,
 } from "@mui/lab";
+import Timeline from "./Timeline";
 
 const CIRCLE_SIZE = 100;
 const SECTION_SIZE = 330;
@@ -52,6 +52,7 @@ const TimelineSection = ({
 const Resume = () => {
   const isMobile = useMediaQuery("(max-width:600px)");
 
+  // left align timeline when isMobile (also removing opposite content when isMobile)
   const timelineSx = isMobile
     ? {
         [`& .${timelineItemClasses.root}:before`]: {
@@ -88,186 +89,74 @@ const Resume = () => {
               left: 112,
             }}
           />
-          <Typography zIndex={1} position="relative">
+          <Typography zIndex={1} position="relative" textAlign="center">
             In software, React is my world, and I am (finally) confidently
             pro-TypeScript.
           </Typography>
         </Box>
       </Stack>
 
-      <Timeline sx={timelineSx}>
-        {/* Percipio */}
-        <TimelineItem>
-          {!isMobile && (
-            <TimelineOppositeContent color="text.secondary">
-              2022 - 2024
-            </TimelineOppositeContent>
-          )}
-
-          <TimelineSeparator>
-            <TimelineDot />
-            <TimelineConnector />
-          </TimelineSeparator>
-
-          <TimelineContent>
-            <Accordion elevation={0} disableGutters sx={accordionSx}>
-              <AccordionSummary>
-                <TimelineSection
-                  line1="Percipio Health"
-                  line2={["Senior Software Engineer", "Software Engineer II"]}
-                  line3="React | React Native | TypeScript"
-                />
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography variant="subtitle2" color="text.secondary">
-                  At Percipio, I worked with an amazing team of familiar faces
-                  from my time at Olive, as well as new ones (some which I
-                  helped hire), to help develop the front end for Percipio's
-                  patient mobile app, clinician-facing portal, as well as the
-                  content portal that manages content shown in the patient app.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-          </TimelineContent>
-        </TimelineItem>
-
-        {/* Olive */}
-        <TimelineItem>
-          {!isMobile && (
-            <TimelineOppositeContent color="text.secondary">
-              2020 - 2022
-            </TimelineOppositeContent>
-          )}
-
-          <TimelineSeparator>
-            <TimelineDot />
-            <TimelineConnector />
-          </TimelineSeparator>
-
-          <TimelineContent>
-            <Accordion elevation={0} disableGutters sx={accordionSx}>
-              <AccordionSummary>
-                <TimelineSection
-                  line1="Olive"
-                  line2={[
-                    "Software Engineer II",
-                    "Front-End Software Engineer",
-                  ]}
-                  line3="React | TypeScript"
-                />
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography variant="subtitle2" color="text.secondary">
-                  I loved working on fun, detailed animation work on the
-                  Apertures team.
-                </Typography>
-                <Typography variant="subtitle2" color="text.secondary">
-                  After Apertures, I worked alongside more great teammates on
-                  various other projects, really starting to learn TypeScript
-                  around this time.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-          </TimelineContent>
-        </TimelineItem>
-
-        {/* Zayo */}
-        <TimelineItem>
-          {!isMobile && (
-            <TimelineOppositeContent color="text.secondary">
-              2020
-            </TimelineOppositeContent>
-          )}
-
-          <TimelineSeparator>
-            <TimelineDot />
-            <TimelineConnector />
-          </TimelineSeparator>
-
-          <TimelineContent>
-            <Accordion elevation={0} disableGutters sx={accordionSx}>
-              <AccordionSummary>
-                <TimelineSection
-                  line1="Zayo"
-                  line2="Application Developer"
-                  line3="React"
-                />
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography variant="subtitle2" color="text.secondary">
-                  Greatest Contribution: Worked closely with senior designer to
-                  develop strategies around delivering designs using best UI/UX
-                  practices.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-          </TimelineContent>
-        </TimelineItem>
-
-        {/* The Green Solution */}
-        <TimelineItem>
-          {!isMobile && (
-            <TimelineOppositeContent color="text.secondary">
-              2019 - 2020
-            </TimelineOppositeContent>
-          )}
-
-          <TimelineSeparator>
-            <TimelineDot />
-            <TimelineConnector />
-          </TimelineSeparator>
-
-          <TimelineContent>
-            <Accordion elevation={0} disableGutters sx={accordionSx}>
-              <AccordionSummary>
-                <TimelineSection
-                  line1="The Green Solution"
-                  line2="Front-End Developer"
-                  line3="jQuery | HTML | CSS"
-                />
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography variant="subtitle2" color="text.secondary">
-                  Proudest Moment: Led 10+ cross-departmental project scoping
-                  meetings after introducing an agile, user-centric approach.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-          </TimelineContent>
-        </TimelineItem>
-
-        {/* EVS */}
-        <TimelineItem>
-          {!isMobile && (
-            <TimelineOppositeContent color="text.secondary">
-              2018 - 2019
-            </TimelineOppositeContent>
-          )}
-
-          <TimelineSeparator>
-            <TimelineDot />
-            <TimelineConnector sx={{ opacity: 0 }} />
-          </TimelineSeparator>
-
-          <TimelineContent>
-            <Accordion elevation={0} disableGutters sx={accordionSx}>
-              <AccordionSummary>
-                <TimelineSection
-                  line1="EVS"
-                  line2="Jr. Software Developer"
-                  line3="AngularJS | Xamarin | SQL"
-                />
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography variant="subtitle2" color="text.secondary">
-                  Greatest Accomplishment: The Pack Station - A key feature of
-                  the web app. UI designed by me!
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-          </TimelineContent>
-        </TimelineItem>
-      </Timeline>
+      <Timeline
+        timelineItems={[
+          {
+            dateRange: "2022 - 2024",
+            summary: {
+              line1: "Percipio Health",
+              line2: ["Senior Software Engineer", "Software Engineer II"],
+              line3: "React | React Native | TypeScript",
+            },
+            details: [
+              "As a founding engineer at Percipio, I worked with an amazing team of familiar faces from my time at Olive in addition to just-as-awesome new teammates (some which I helped hire) to develop the front end for the patient mobile app, the clinician-facing portal, and the content portal that manages content shown in the patient app.",
+              "In my early days at Percipio, I dabbled a bit in machine learning, supporting efforts to get our first MRCNN model working using TensorFlow.",
+            ],
+          },
+          {
+            dateRange: "2020 - 2022",
+            summary: {
+              line1: "Olive",
+              line2: ["Software Engineer II", "Front-End Software Engineer"],
+              line3: "React | TypeScript",
+            },
+            details: [
+              "At Olive, I loved working on fun, detailed animation work on the Apertures team.",
+              "After Apertures, I worked alongside more great teammates on various other projects, really starting to learn TypeScript around this time.",
+            ],
+          },
+          {
+            dateRange: "2020",
+            summary: {
+              line1: "Zayo",
+              line2: "Application Developer",
+              line3: "React",
+            },
+            details: [
+              "Greatest Contribution: Worked closely with senior designer to develop strategies around delivering designs using best UI/UX practices.",
+            ],
+          },
+          {
+            dateRange: "2019 - 2020",
+            summary: {
+              line1: "The Green Solution",
+              line2: "Front-End Developer",
+              line3: "jQuery | HTML | CSS",
+            },
+            details: [
+              "Proudest Moment: Led 10+ cross-departmental project scoping meetings after introducing an agile, user-centric approach.",
+            ],
+          },
+          {
+            dateRange: "2018 - 2019",
+            summary: {
+              line1: "EVS",
+              line2: "Jr. Software Developer",
+              line3: "AngularJS | Xamarin | SQL",
+            },
+            details: [
+              "Greatest Accomplishment: The Pack Station - A key feature of the web app. UI designed by me!",
+            ],
+          },
+        ]}
+      />
 
       <Stack mt={10}>
         <Stack spacing={6} alignSelf="center">
@@ -301,98 +190,38 @@ const Resume = () => {
               University of Illinois at Chicago
             </Typography>
 
-            <Timeline sx={timelineSx}>
-              {/* Graduate Coursework */}
-              <TimelineItem>
-                {!isMobile && (
-                  <TimelineOppositeContent color="text.secondary">
-                    2014 - 2015
-                  </TimelineOppositeContent>
-                )}
-
-                <TimelineSeparator>
-                  <TimelineDot />
-                  <TimelineConnector />
-                </TimelineSeparator>
-
-                <TimelineContent>
-                  <Accordion elevation={0} disableGutters sx={accordionSx}>
-                    <AccordionSummary>
-                      <TimelineSection
-                        line1="Graduate Coursework / Teaching Assistant"
-                        line2="MS Student in Pure Mathematics"
-                      />
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography variant="subtitle2" color="text.secondary">
-                        Awarded Honorable Mention for Outstanding Teaching
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-                </TimelineContent>
-              </TimelineItem>
-
-              {/* BS in Math */}
-              <TimelineItem>
-                {!isMobile && (
-                  <TimelineOppositeContent color="text.secondary">
-                    Graduated in 2014
-                  </TimelineOppositeContent>
-                )}
-
-                <TimelineSeparator>
-                  <TimelineDot />
-                  <TimelineConnector />
-                </TimelineSeparator>
-
-                <TimelineContent>
-                  <Accordion elevation={0} disableGutters sx={accordionSx}>
-                    <AccordionSummary>
-                      <TimelineSection
-                        line1="Bachelor of Science in Mathematics"
-                        line2="Minor in Spanish"
-                      />
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography variant="subtitle2" color="text.secondary">
-                        GPA: 3.8
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-                </TimelineContent>
-              </TimelineItem>
-
-              {/* Undergrad Research */}
-              <TimelineItem>
-                {!isMobile && (
-                  <TimelineOppositeContent color="text.secondary">
-                    2012 - 2013
-                  </TimelineOppositeContent>
-                )}
-
-                <TimelineSeparator>
-                  <TimelineDot />
-                </TimelineSeparator>
-
-                <TimelineContent>
-                  <Accordion elevation={0} disableGutters sx={accordionSx}>
-                    <AccordionSummary>
-                      <TimelineSection
-                        line1="Undergraduate Researcher"
-                        line2="Number Theory"
-                      />
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography variant="subtitle2" color="text.secondary">
-                        Ask me about the behavior of a given quadratic
-                        irrational's simple continued fraction expansion when
-                        multiplied by two.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-                </TimelineContent>
-              </TimelineItem>
-            </Timeline>
+            <Timeline
+              timelineItems={[
+                {
+                  dateRange: "2014 - 2015",
+                  summary: {
+                    line1: "Graduate Coursework / Teaching Assistant",
+                    line2: "MS Student in Pure Mathematics",
+                  },
+                  details: [
+                    "Awarded Honorable Mention for Outstanding Teaching",
+                  ],
+                },
+                {
+                  dateRange: "Graduated in 2014",
+                  summary: {
+                    line1: "Bachelor of Science in Mathematics",
+                    line2: "Minor in Spanish",
+                  },
+                  details: ["GPA: 3.8"],
+                },
+                {
+                  dateRange: "2012 - 2013",
+                  summary: {
+                    line1: "Undergraduate Researcher",
+                    line2: "Number Theory",
+                  },
+                  details: [
+                    "Ask me about the behavior of a given quadratic irrational's simple continued fraction expansion when multiplied by two.",
+                  ],
+                },
+              ]}
+            />
           </Stack>
         </Stack>
       </Stack>
