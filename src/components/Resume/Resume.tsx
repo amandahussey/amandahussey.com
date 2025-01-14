@@ -54,7 +54,7 @@ const Resume = () => {
             },
             details: [
               "At Olive, I loved working on fun, detailed animation work on the Apertures team.",
-              "After Apertures, I worked alongside more great teammates on various other projects, really starting to learn TypeScript around this time.",
+              "After Apertures, I worked alongside more great teammates on various other projects, really starting to learn TypeScript around this time (many thanks to said great teammates).",
             ],
           },
           {
