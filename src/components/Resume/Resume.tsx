@@ -12,7 +12,6 @@ import {
   TimelineContent,
   TimelineDot,
   TimelineItem,
-  timelineItemClasses,
   TimelineOppositeContent,
   TimelineSeparator,
 } from "@mui/lab";
