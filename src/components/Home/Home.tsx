@@ -43,7 +43,6 @@ const Home = () => {
     <div>
       <Landing navIsFixed={navIsFixed} />
       <Nav />
-      <About type={"past"} />
       <Resume />
       <About type={"future"} />
       <About type={"contact"} />
