@@ -5,6 +5,7 @@ import {
   Box,
   Stack,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 import {
   Timeline,
@@ -12,6 +13,7 @@ import {
   TimelineContent,
   TimelineDot,
   TimelineItem,
+  timelineItemClasses,
   TimelineOppositeContent,
   TimelineSeparator,
 } from "@mui/lab";
@@ -42,6 +44,17 @@ const TimelineSection = ({
 };
 
 const Resume = () => {
+  const isMobile = useMediaQuery("(max-width:600px)");
+
+  const timelineSx = isMobile
+    ? {
+        [`& .${timelineItemClasses.root}:before`]: {
+          flex: 0,
+          padding: 0,
+        },
+      }
+    : undefined;
+
   const accordionSx = {
     backgroundColor: "transparent",
     "&:before": {
@@ -55,7 +68,7 @@ const Resume = () => {
 
   return (
     <Stack>
-      <Stack mb={10} alignSelf="center">
+      <Stack mb={6} alignSelf="center">
         <Box maxWidth={SECTION_SIZE} position="relative" p={2}>
           <Box
             style={{
@@ -76,12 +89,14 @@ const Resume = () => {
         </Box>
       </Stack>
 
-      <Timeline>
+      <Timeline sx={timelineSx}>
         {/* Percipio */}
         <TimelineItem>
-          <TimelineOppositeContent color="text.secondary">
-            2022 - 2024
-          </TimelineOppositeContent>
+          {!isMobile && (
+            <TimelineOppositeContent color="text.secondary">
+              2022 - 2024
+            </TimelineOppositeContent>
+          )}
 
           <TimelineSeparator>
             <TimelineDot />
@@ -112,9 +127,11 @@ const Resume = () => {
 
         {/* Olive */}
         <TimelineItem>
-          <TimelineOppositeContent color="text.secondary">
-            2020 - 2022
-          </TimelineOppositeContent>
+          {!isMobile && (
+            <TimelineOppositeContent color="text.secondary">
+              2020 - 2022
+            </TimelineOppositeContent>
+          )}
 
           <TimelineSeparator>
             <TimelineDot />
@@ -148,9 +165,11 @@ const Resume = () => {
 
         {/* Zayo */}
         <TimelineItem>
-          <TimelineOppositeContent color="text.secondary">
-            2020
-          </TimelineOppositeContent>
+          {!isMobile && (
+            <TimelineOppositeContent color="text.secondary">
+              2020
+            </TimelineOppositeContent>
+          )}
 
           <TimelineSeparator>
             <TimelineDot />
@@ -179,9 +198,11 @@ const Resume = () => {
 
         {/* The Green Solution */}
         <TimelineItem>
-          <TimelineOppositeContent color="text.secondary">
-            2019 - 2020
-          </TimelineOppositeContent>
+          {!isMobile && (
+            <TimelineOppositeContent color="text.secondary">
+              2019 - 2020
+            </TimelineOppositeContent>
+          )}
 
           <TimelineSeparator>
             <TimelineDot />
@@ -209,9 +230,12 @@ const Resume = () => {
 
         {/* EVS */}
         <TimelineItem>
-          <TimelineOppositeContent color="text.secondary">
-            2018 - 2019
-          </TimelineOppositeContent>
+          {!isMobile && (
+            <TimelineOppositeContent color="text.secondary">
+              2018 - 2019
+            </TimelineOppositeContent>
+          )}
+
           <TimelineSeparator>
             <TimelineDot />
             <TimelineConnector sx={{ opacity: 0 }} />
@@ -250,7 +274,7 @@ const Resume = () => {
                   position: "absolute",
                   zIndex: 0,
                   top: -18,
-                  right: 8,
+                  right: -32,
                 }}
               />
               <Typography zIndex={1} position="relative" textAlign="center">
@@ -260,16 +284,23 @@ const Resume = () => {
           </Stack>
 
           <Stack spacing={3}>
-            <Typography textAlign="center" variant="h6">
+            <Typography
+              textAlign={isMobile ? "left" : "center"}
+              variant="h6"
+              pl={isMobile ? 7 : undefined}
+              pr={2}
+            >
               University of Illinois at Chicago
             </Typography>
 
-            <Timeline>
+            <Timeline sx={timelineSx}>
               {/* Graduate Coursework */}
               <TimelineItem>
-                <TimelineOppositeContent color="text.secondary">
-                  2014 - 2015
-                </TimelineOppositeContent>
+                {!isMobile && (
+                  <TimelineOppositeContent color="text.secondary">
+                    2014 - 2015
+                  </TimelineOppositeContent>
+                )}
 
                 <TimelineSeparator>
                   <TimelineDot />
@@ -295,9 +326,11 @@ const Resume = () => {
 
               {/* BS in Math */}
               <TimelineItem>
-                <TimelineOppositeContent color="text.secondary">
-                  Graduated in 2014
-                </TimelineOppositeContent>
+                {!isMobile && (
+                  <TimelineOppositeContent color="text.secondary">
+                    Graduated in 2014
+                  </TimelineOppositeContent>
+                )}
 
                 <TimelineSeparator>
                   <TimelineDot />
@@ -323,9 +356,11 @@ const Resume = () => {
 
               {/* Undergrad Research */}
               <TimelineItem>
-                <TimelineOppositeContent color="text.secondary">
-                  2012 - 2013
-                </TimelineOppositeContent>
+                {!isMobile && (
+                  <TimelineOppositeContent color="text.secondary">
+                    2012 - 2013
+                  </TimelineOppositeContent>
+                )}
 
                 <TimelineSeparator>
                   <TimelineDot />
