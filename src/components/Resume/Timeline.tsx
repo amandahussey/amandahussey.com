@@ -25,7 +25,7 @@ type TimelineSummarySection = {
 const TimelineSection = ({ line1, line2, line3 }: TimelineSummarySection) => {
   return (
     <Stack>
-      <Typography>{line1}</Typography>
+      <Typography sx={{ textDecoration: "underline" }}>{line1}</Typography>
       {line2 ? (
         Array.isArray(line2) ? (
           line2.map((l) => <Typography variant="subtitle2">{l}</Typography>)
